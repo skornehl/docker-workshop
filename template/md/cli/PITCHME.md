@@ -237,3 +237,13 @@ Parameter | Description
 @title[Dockerfilem-ultistage]
 @[1-5]
 @[7-11]
+
++++?code=template/md/cli/busybox-static?lang=sh&title=From_scratch
+@snap[north-east]
+### [@fa[info]](https://github.com/docker-library/busybox/blob/master/uclibc/Dockerfile.builder)
+@snapend
+@[7-12]
+@[13-17]
+@[19-21]
+@[27]
+@[30-33]
