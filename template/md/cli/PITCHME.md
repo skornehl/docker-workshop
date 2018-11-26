@@ -153,7 +153,6 @@ Parameter | Description
 ------------ | -------------
 FROM | Sets the base image
 RUN | Runs bash command while building
-LABEL | Adds metadata
 ADD | Copies new files, directories or remote file URLs
 COPY | Copies new files and directories
 EXPOSE | Informs Docker about listening Ports
@@ -191,6 +190,7 @@ Parameter | Description
 @ul[](false)
 - Build a Dockerfile which replaces /usr/share/nginx/html/index.html
 - Start and access it
+- Optionally: Make dockerhub Account and push it!
 @ulend
 @snapend
 
@@ -207,6 +207,7 @@ Parameter | Description
 @[4-5]
 @[7-8]
 @[10-13]
+@[15-18]
 
 +++
 @title[Layer]
