@@ -217,6 +217,22 @@ Parameter | Description
 @snapend
 ![layer](template/img/layers.png)
 
++++
+@title[Images]
+
+@snap[north-west]
+### Images
+@snapend
+
+@snap[west span-100]
+@ul[](false)
+- Keep it small
+- Only one runtime per container
+- Use pipes, remove layers after developing
+- Use .dockerignore if needed
+@ulend
+@snapend
+
 +++?code=template/md/cli/Dockerfile-multistage?title=Dockerfile-multistage
 @title[Dockerfilem-ultistage]
 @[1-5]
