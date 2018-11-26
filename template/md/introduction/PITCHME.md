@@ -25,12 +25,13 @@ Ansible @fa[arrow-left] <br/>
 @title[Agenda]
 
 @snap[north-west]
-### Agenda
-Irgendwas<br/>
-mit<br/>
-docker<br/>
-und<br/>
-so
+### Agenda Day 1
+@ul[](false)
+- Big Picture
+- Architecture
+- Typical Workflow
+- Docker Compose
+@ulend
 @snapend
 
 +++
