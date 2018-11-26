@@ -39,7 +39,7 @@
 @snapend
 
 @snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices) Dockerfile: Guidelines
+### <br/>[@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices) Dockerfile: Guidelines
 @snapend
 <br/>
 
