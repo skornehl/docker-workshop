@@ -177,3 +177,37 @@ COPY . /tmp/
 - **ADD**
     - TAR AUTO-EXTRACTION
     - Because image size matters, using ADD to fetch packages from remote URLs is strongly discouraged
++++
+
+@title[Clean Up]
+
+@snap[north-west]
+### Clean up command
+@snapend
+
+```
+# Kill all running containers
+docker kill $(docker ps -q)
+
+# Delete all stopped containers (including data-only containers)
+docker rm $(docker ps -a -q)
+
+# Remove all containers:
+docker rm -f $(docker ps -a -q)
+
+# Remove dangling images:
+docker rmi $(docker images -q -f dangling=true)
+
+# Remove all images
+docker rmi $(docker images -q)
+
+# Remove all unused images, not just dangling ones
+docker image prune -a -f
+
+# Remove all unused containers, volumes, networks and images
+# e.g. both dangling and unreferenced
+docker system prune
+
+# Remove all stopped containers
+docker container prune
+```
