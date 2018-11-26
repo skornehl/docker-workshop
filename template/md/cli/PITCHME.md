@@ -228,7 +228,8 @@ Parameter | Description
 @ul[](false)
 - Keep it small
 - Only one runtime per container
-- Use pipes, remove layers after developing
+- Use pipes, group common operations
+- Order of the statements matters
 - Use .dockerignore if needed
 - Use environment variable
 @ulend
