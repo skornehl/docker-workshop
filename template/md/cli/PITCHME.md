@@ -151,7 +151,7 @@ stats | Display container resource usage statistics
 
 Parameter | Description
 ------------ | -------------
-FROM | Sets the baseimage
+FROM | Sets the base image
 RUN | Runs bash command while building
 LABEL | Adds metadata
 ADD | Copies new files, directories or remote file URLs
@@ -206,6 +206,14 @@ Parameter | Description
 @[4-5]
 @[7-8]
 @[10-13]
+
++++
+@title[Layer]
+
+@snap[north-west]
+### Layer
+@snapend
+![layer](template/img/layers.png)
 
 +++?code=template/md/cli/Dockerfile-multistage?title=Dockerfile-multistage
 @title[Dockerfilem-ultistage]
