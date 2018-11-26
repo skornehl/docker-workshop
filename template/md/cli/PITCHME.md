@@ -1,9 +1,9 @@
 ---?image=template/img/run.jpeg
 
-@title[Docker CLI]
+@title[Typical Local Workflow with CLI]
 
 @snap[north]
-## Docker CLI
+## Typical Local Workflow with CLI
 @snapend
 
 +++
@@ -19,12 +19,12 @@
 
 Parameter | Description
 ------------ | -------------
-ps | List containers
-images | List images
-info | Display system-wide information
-inspect | Return low-level information on Docker objects
-logs | Fetch the logs of a container
-stats | Display a live stream of container(s) resource usage statistics
+pull | Pulls image from registry
+push | Pushes image to registry
+run | Start container
+stop | Stop container
+rm | Remove container
+rmi | Remove image
 
 +++
 @title[CLI reference - RUN]
@@ -76,10 +76,10 @@ Parameter | Description
 
 @snap[west span-100]
 @ul[](false)
+- Pull nginx:latest container from dockerhub
 - Run a nginx container with name 'web1' and exposed port 8080
 - Try to access it from Host machine with curl
 - Log into container and list directories
-- Try to read logs and inspect container
 @ulend
 @snapend
 
@@ -88,7 +88,117 @@ Parameter | Description
 
 @[1-2]
 @[4-5]
-@[7-9]
-@[11-12]
-@[14-15]
-@[17-20]
+@[7-8]
+@[10-12]
+@[14-16]
+
++++
+@title[CLI reference]
+
+@snap[north-west]
+### CLI reference 
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/reference/commandline/cli/) 
+@snapend
+
+Parameter | Description
+------------ | -------------
+ps | List containers
+images | List images
+info | Display system-wide information
+inspect | Return low-level information
+logs | Fetch the logs of a container
+stats | Display container resource usage statistics
+
++++
+@title[Try it]
+
+@snap[north-west]
+### Try it
+@snapend
+
+@snap[west span-100]
+@ul[](false)
+- Run a nginx container with name 'web1' and exposed port 8080
+- Try to access it from Host machine with curl and foillow access logs
+- Find out IP of the running container
+- Monitor memory consumption of web1
+@ulend
+@snapend
+
++++?code=template/md/cli/example.1.sh?lang=sh&title=Solution
+@title[Solution]
+
+@[1-2]
+@[4-5]
+@[7-8]
+@[10-13]
+@[15-16]
+@[18-20]
+
++++
+@title[Dockerfile
+
+@snap[north-west]
+### Dockerfile
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/reference/builder/) 
+@snapend
+
+Parameter | Description
+------------ | -------------
+FROM | Sets the baseimage
+RUN | Runs bash command while building
+LABEL | Adds metadata
+ADD | Copies new files, directories or remote file URLs
+EXPOSE | Informs Docker about listening Ports
+ENV | Sets environment variable
+
++++
+@title[Build]
+
+@snap[north-west]
+### CLI reference 
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/reference/commandline/cli/) 
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/reference/commandline/exec/) <br/>
+@box[bg-gray rounded](docker build [OPTIONS] PATH | URL | -)
+@snapend
+<br/>
+<br/>
+
+Parameter | Description
+------------ | -------------
+--add-host | Adds /etc/hosts entry
+--build-arg | Build-time variables
+-f | Filename (default: Dockerfile)
+-t | Set Tag
+
++++
+@title[Try it]
+
+@snap[north-west]
+### Try it
+@snapend
+
+@snap[west span-100]
+@ul[](false)
+- Build a Dockerfile which replaces /usr/share/nginx/html/index.html
+- Start and access it
+@ulend
+@snapend
+
++++?code=template/md/cli/index.html?title=index.html
+@title[index.html]
+
++++?code=template/md/cli/Dockerfile?title=Dockerfile
+@title[Dockerfile]
