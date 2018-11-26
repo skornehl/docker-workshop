@@ -110,4 +110,35 @@ RUN apt-get update && apt-get install --yes \
     - alway use this format:
     ```CMD ["executable", "param1", "param2"…]```
     - with ENTRYPOINT is a kind of default parameter
-- **EXPOSE**: use the common, traditional port for your application
+++
+
+@title[Guidelines]
+
+@snap[north-west]
+### Best Practices
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
+@snapend
+- **EXPOSE**: 
+    - use the common, traditional port for your application
+    - For container linking, Docker provides environment variables (ie, MYSQL_PORT_3306_TCP)
+++
+
+@title[Guidelines]
+
+@snap[north-west]
+### Best Practices
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
+@snapend
+- **ENV**
+    - Update path to ensure commands work:
+    ```
+    ENV PATH /usr/local/nginx/bin:$PATH
+    ```
+    - Provide needed env vars for services eg. Postgres PGDATA
+    - Use for version numbers and pathes (like constant vars):
