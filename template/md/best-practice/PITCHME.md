@@ -82,16 +82,15 @@ RUN apt-get update && apt-get install --yes \
 @snapend
 <br/>
 
-- #FROM#: use current official Repositories,
+- **FROM**: use current official Repositories,
     e.g. Debian is tightly controlled and kept minimal: 150 mb.
-- #RUN#: split long or complex RUN statements on multiple lines separated
+- **RUN**: split long or complex RUN statements on multiple lines separated
   ```RUN command-1 \
     command-2 \
     command-3```
-- #Avoid# RUN apt-get upgrade or dist-upgrade
-- #RUN# apt-get update
+- **Avoid** RUN apt-get upgrade or dist-upgrade
+- **RUN** apt-get update
   CACHE BUSTING: Always combine RUN apt-get update && apt-get install -y 
-- VERSION PINNING: forces the build to retrieve a particular version
 +++
 
 @title[Guidelines]
@@ -104,15 +103,11 @@ RUN apt-get update && apt-get install --yes \
 ### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
 @snapend
 <br/>
-5. CMD
-
-alway use this format:
-CMD ["executable", "param1", "param2"…]
-CMD ["apache2","-DFOREGROUND"]
-CMD ["perl", "-de0"]
-CMD ["python"]
-CMD ["php", "-a"]
-CMD in cooperation with ENTRYPOINT is a kind of default parameter, if docker run provides no further parameters
+- VERSION PINNING: forces the build to retrieve a particular version
+CMD
+    - alway use this format:
+    ```CMD ["executable", "param1", "param2"…]```
+    - with ENTRYPOINT is a kind of default parameter
 . EXPOSE
 
 use the common, traditional port for your application, e.g.
