@@ -85,9 +85,11 @@ RUN apt-get update && apt-get install --yes \
 - **FROM**: use current official Repositories,
     e.g. Debian is tightly controlled and kept minimal: 150 mb.
 - **RUN**: split long or complex RUN statements on multiple lines separated
-  ```RUN command-1 \
+  ```
+  RUN command-1 \
     command-2 \
-    command-3```
+    command-3
+    ```
 - **Avoid** RUN apt-get upgrade or dist-upgrade
 - **RUN** apt-get update
   CACHE BUSTING: Always combine RUN apt-get update && apt-get install -y 
