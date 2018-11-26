@@ -65,6 +65,7 @@ RUN apt-get update && apt-get install --yes \
 ### <br/>[@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices)
 @snapend
 <br/>
+- Build Cache
   - CHECKSUMS: For ADD and COPY the contents of the file(s) in the image are examined and a checksum is calculated for each file.
   - NO CACHE LOOKUP: All other commands are not evaluted on a file level to determine a cache match/hit.
 
@@ -81,34 +82,28 @@ RUN apt-get update && apt-get install --yes \
 @snapend
 <br/>
 
-@ul[](false)
-Dockerfile: Instructions
-- FROM: use current official Repositories,
+- #FROM#: use current official Repositories,
     e.g. Debian is tightly controlled and kept minimal: 150 mb.
-- RUN: split long or complex RUN statements on multiple lines separated
-```RUN command-1 \
+- #RUN#: split long or complex RUN statements on multiple lines separated
+  ```RUN command-1 \
     command-2 \
     command-3```
-3. Avoid RUN apt-get upgrade or dist-upgrade
-     as many of the “essential” packages from the base images
-     won’t upgrade inside an unprivileged container.
-Best Practices
-Dockerfile: Instructions
-4. RUN apt-get update
+- #Avoid# RUN apt-get upgrade or dist-upgrade
+- #RUN# apt-get update
+  CACHE BUSTING: Always combine RUN apt-get update && apt-get install -y 
+- VERSION PINNING: forces the build to retrieve a particular version
++++
 
-CACHE BUSTING: Always combine RUN apt-get update && apt-get install -y .... Using apt-get update alone in a RUN statement causes caching issues and subsequent apt-get install instructions fail.
- FROM ubuntu:14.04
-RUN apt-get update
-RUN apt-get install -y curl
-FROM ubuntu:14.04
-RUN apt-get update
-RUN apt-get install -y curl ngnix
-VERSION PINNING: forces the build to retrieve a particular version regardless of what’s in the cache. new versions cause a cache bust of apt-get update.
-RUN apt-get update && apt-get install 
-    package-foo=1.3.* \
-    s3cmd=1.1.* \
-Best Practices
-Dockerfile: Instructions
+@title[Guidelines]
+
+@snap[north-west]
+### Best Practices
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
+@snapend
+<br/>
 5. CMD
 
 alway use this format:
