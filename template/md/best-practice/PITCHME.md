@@ -15,11 +15,10 @@
 @snapend
 
 @snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices) Dockerfile: Guidelines
+### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices)
 @snapend
 <br/>
 
-@ul[](false)
 - Containers should be ephemeral
 - Use a .dockerignore file
 - Use small base images
@@ -29,7 +28,7 @@
 - Run only one process per container
 - Minimize the number of layers
 - Order of the statements matters
-@ulend
+
 +++
 
 @title[Guidelines]
@@ -42,7 +41,6 @@
 ### <br/>[@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices)
 @snapend
 <br/>
-@ul[](false)
 - Sort mult-line arguments and indent 4 spaces:
 ```
 RUN apt-get update && apt-get install --yes \
@@ -55,7 +53,6 @@ RUN apt-get update && apt-get install --yes \
   - CACHING: Use whenever possible. Saves time.
   - DISABLE: ```docker build --no-cache=true -t NAME:TAG .```
 
-@ulend
 +++
 
 @title[Guidelines]
@@ -68,10 +65,8 @@ RUN apt-get update && apt-get install --yes \
 ### <br/>[@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices)
 @snapend
 <br/>
-@ul[](false)
   - CHECKSUMS: For ADD and COPY the contents of the file(s) in the image are examined and a checksum is calculated for each file. During the cache lookup, the checksum is compared against the checksum in the existing images. Cache is invalid if anything has changed (besides file access dates)!
   - NO CACHE LOOKUP: All other commands are not evaluted on a file level to determine a cache match/hit. Just the command string itself is used to find a match when processing files updated in the container, e.g. RUN apt-get -y update.
-@ulend
 
 +++
 
