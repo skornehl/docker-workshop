@@ -24,4 +24,16 @@
 - Build a Dockerfile which replaces /usr/share/nginx/html/index.html
 - Start and access it
 - Optionally: Make dockerhub Account and push it!
+- Build a Dockerfile which replaces /usr/share/nginx/html/index.html
+- Start and access it
+- Optionally: Make dockerhub Account and push it!
+- Build a Dockerfile which replaces /usr/share/nginx/html/index.html
+- Start and access it
+- Optionally: Make dockerhub Account and push it!
+- Build a Dockerfile which replaces /usr/share/nginx/html/index.html
+- Start and access it
+- Optionally: Make dockerhub Account and push it!
+- Build a Dockerfile which replaces /usr/share/nginx/html/index.html
+- Start and access it
+- Optionally: Make dockerhub Account and push it!
 @ulend
