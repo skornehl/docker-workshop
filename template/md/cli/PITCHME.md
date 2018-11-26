@@ -122,7 +122,7 @@ stats | Display container resource usage statistics
 @snap[west span-100]
 @ul[](false)
 - Run a nginx container with name 'web1' and exposed port 8080
-- Try to access it from Host machine with curl and foillow access logs
+- Try to access it from Host machine with curl and follow access logs
 - Find out IP of the running container
 - Monitor memory consumption of web1
 @ulend
@@ -139,7 +139,7 @@ stats | Display container resource usage statistics
 @[18-20]
 
 +++
-@title[Dockerfile
+@title[Dockerfile]
 
 @snap[north-west]
 ### Dockerfile
@@ -163,10 +163,6 @@ ENV | Sets environment variable
 
 @snap[north-west]
 ### CLI reference 
-@snapend
-
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/reference/commandline/cli/) 
 @snapend
 
 @snap[north-east]
