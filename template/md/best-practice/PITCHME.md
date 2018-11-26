@@ -211,3 +211,11 @@ docker system prune
 # Remove all stopped containers
 docker container prune
 ```
+@[1-2]
+@[4-5]
+@[7-8]
+@[10-11]
+@[13-14]
+@[16-17]
+@[19-21]
+@[23-25]
