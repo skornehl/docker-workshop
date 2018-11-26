@@ -110,7 +110,7 @@ RUN apt-get update && apt-get install --yes \
     - alway use this format:
     ```CMD ["executable", "param1", "param2"…]```
     - with ENTRYPOINT is a kind of default parameter
-++
++++
 
 @title[Guidelines]
 
