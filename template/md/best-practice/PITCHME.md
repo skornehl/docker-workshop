@@ -91,8 +91,6 @@ RUN apt-get update && apt-get install --yes \
     command-3
     ```
 - **Avoid** RUN apt-get upgrade or dist-upgrade
-- **RUN** apt-get update
-  CACHE BUSTING: Always combine RUN apt-get update && apt-get install -y 
 +++
 
 @title[Guidelines]
@@ -105,21 +103,11 @@ RUN apt-get update && apt-get install --yes \
 ### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
 @snapend
 <br/>
-- VERSION PINNING: forces the build to retrieve a particular version
-CMD
+- **RUN** apt-get update
+  - **CACHE BUSTING**: Always combine RUN apt-get update && apt-get install -y 
+- **VERSION PINNING** forces the build to retrieve a particular version
+- **CMD**
     - alway use this format:
     ```CMD ["executable", "param1", "param2"…]```
     - with ENTRYPOINT is a kind of default parameter
-. EXPOSE
-
-use the common, traditional port for your application, e.g.
-EXPOSE 80 # Apache 
-EXPOSE 27017 # MongoDB
-For container linking, Docker provides environment variables for the path from the recipient container back to the source (ie, MYSQL_PORT_3306_TCP)
-
-
-
-
-
-
-@ulend
+- **EXPOSE**: use the common, traditional port for your application
