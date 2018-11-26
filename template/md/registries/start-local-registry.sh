@@ -15,4 +15,4 @@ docker pull localhost:5000/myfirstimage
 
 #Cleanup
 docker container stop registry 
-ocker container rm -v registry
+docker container rm -v registry

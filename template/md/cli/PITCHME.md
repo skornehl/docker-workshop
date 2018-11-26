@@ -218,10 +218,10 @@ Parameter | Description
 ![layer](template/img/layers.png)
 
 +++
-@title[Images]
+@title[Best practice]
 
 @snap[north-west]
-### Images
+### Best practice
 @snapend
 
 @snap[west span-100]
@@ -230,6 +230,7 @@ Parameter | Description
 - Only one runtime per container
 - Use pipes, remove layers after developing
 - Use .dockerignore if needed
+- Use environment variable
 @ulend
 @snapend
 

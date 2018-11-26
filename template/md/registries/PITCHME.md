@@ -31,6 +31,10 @@
 ### Dockerhub
 @snapend
 
+@snap[north-east]
+### [@fa[info]](https://hub.docker.com)
+@snapend
+
 @snap[west span-100]
 @ul[](false)
 - Default registry
@@ -40,10 +44,14 @@
 @snapend
 
 +++
-@title[Dockerhub]
+@title[Quay]
 
 @snap[north-west]
 ### Quay
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://quay.io)
 @snapend
 
 @snap[west span-100]
@@ -74,6 +82,10 @@
 
 @snap[north-west]
 ### registry from Docker Inc.
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/registry)
 @snapend
 
 @snap[west span-100]
