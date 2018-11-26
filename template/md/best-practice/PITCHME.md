@@ -124,7 +124,7 @@ RUN apt-get update && apt-get install --yes \
 - **EXPOSE**: 
     - use the common, traditional port for your application
     - For container linking, Docker provides environment variables (ie, MYSQL_PORT_3306_TCP)
-++
++++
 
 @title[Guidelines]
 
