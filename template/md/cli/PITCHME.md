@@ -155,6 +155,7 @@ FROM | Sets the base image
 RUN | Runs bash command while building
 LABEL | Adds metadata
 ADD | Copies new files, directories or remote file URLs
+COPY | Copies new files and directories
 EXPOSE | Informs Docker about listening Ports
 ENV | Sets environment variable
 
