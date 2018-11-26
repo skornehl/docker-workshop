@@ -83,7 +83,7 @@ Parameter | Description
 @ulend
 @snapend
 
-+++?code=template/md/cli/example.sh?lang=sh&title=Solution
++++?code=template/md/cli/first-container.sh?lang=sh&title=Solution
 @title[Solution]
 
 @[1-2]
@@ -128,7 +128,7 @@ stats | Display container resource usage statistics
 @ulend
 @snapend
 
-+++?code=template/md/cli/example.1.sh?lang=sh&title=Solution
++++?code=template/md/cli/monitoring.sh?lang=sh&title=Solution
 @title[Solution]
 
 @[1-2]
@@ -199,7 +199,15 @@ Parameter | Description
 +++?code=template/md/cli/Dockerfile?title=Dockerfile
 @title[Dockerfile]
 
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/reference/commandline/exec/) <br/>
-@box[bg-gray rounded](docker build -t nginx:local .)
-@snapend
++++?code=template/md/cli/dockerfile.sh?lang=sh&title=Solution
+@title[Solution]
+
+@[1-2]
+@[4-5]
+@[7-8]
+@[10-13]
+
++++?code=template/md/cli/Dockerfile-multistage?title=Dockerfile-multistage
+@title[Dockerfilem-ultistage]
+@[1-5]
+@[7-11]
