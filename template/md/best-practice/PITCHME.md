@@ -29,6 +29,20 @@
 - Run only one process per container
 - Minimize the number of layers
 - Order of the statements matters
+@ulend
++++
+
+@title[Guidelines]
+
+@snap[north-west]
+### Best Practices
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices) Dockerfile: Guidelines
+@snapend
+<br/>
+
 - Sort mult-line arguments and indent 4 spaces:
 ```
 RUN apt-get update && apt-get install --yes \
