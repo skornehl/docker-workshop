@@ -158,9 +158,9 @@ RUN apt-get update && apt-get install --yes \
     - COPY only supports the basic copying of local files
     - FEWER CACHE INVALIDATIONS: Reuse multiple COPY steps individually.
     ```
-    COPY requirements.txt /tmp/
-    RUN pip install --requirement /tmp/requirements.txt
-    COPY . /tmp/
+COPY requirements.txt /tmp/
+RUN pip install --requirement /tmp/requirements.txt
+COPY . /tmp/
     ```
 
 +++
