@@ -141,4 +141,39 @@ RUN apt-get update && apt-get install --yes \
     ENV PATH /usr/local/nginx/bin:$PATH
     ```
     - Provide needed env vars for services eg. Postgres PGDATA
-    - Use for version numbers and pathes (like constant vars):
+    - Use for version numbers and pathes (like constant vars)
++++
+
+@title[Guidelines]
+
+@snap[north-west]
+### Best Practices
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
+@snapend
+- **COPY**
+    - Beware of using ADD instead of COPY
+    - COPY only supports the basic copying of local files
+    - FEWER CACHE INVALIDATIONS: Reuse multiple COPY steps individually.
+    ```
+    COPY requirements.txt /tmp/
+    RUN pip install --requirement /tmp/requirements.txt
+    COPY . /tmp/
+    ```
+
++++
+
+@title[Guidelines]
+
+@snap[north-west]
+### Best Practices
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
+@snapend
+- **ADD**
+    - TAR AUTO-EXTRACTION
+    - Because image size matters, using ADD to fetch packages from remote URLs is strongly discouraged
