@@ -95,11 +95,11 @@
 @ul[](false)
 - Start a local registry 
   (Hint: docker pull registry:2 - it runs on port 5000)
-- Push and pull a Image into it
+- Push and pull an image into it
 @ulend
 @snapend
 
-+++?code=template/md/network/example.sh?lang=sh&title=Solution
++++?code=template/md/registries/start-local-registry.sh?lang=sh&title=Solution
 @title[Solution]
 
 @[1-2]
