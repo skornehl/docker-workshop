@@ -198,3 +198,8 @@ Parameter | Description
 
 +++?code=template/md/cli/Dockerfile?title=Dockerfile
 @title[Dockerfile]
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/reference/commandline/exec/) <br/>
+@box[bg-gray rounded](docker build -t nginx:local .)
+@snapend
