@@ -38,7 +38,7 @@
 @snapend
 
 @snap[west]
-__Development environments:__
+__Development environments:__<br/>
 * running web apps in an isolated environment is crucial
 * the Compose file allows to document service dependencies
 * multi-page “developer getting started guides” can be avoided
@@ -56,10 +56,10 @@ __Development environments:__
 @snapend
 
 @snap[west]
-__Automated testing environments:__
+__Automated testing environments:__<br/>
 * create & destroy isolated testing environments easily
- 
-__Single host deployments:__
+ <br/>
+__Single host deployments:__<br/>
 * deploy to a remote Docker Engine or Swarm cluster
 @snapend
 
