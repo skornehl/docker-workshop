@@ -17,6 +17,7 @@
 @ul[](false)
 - CI/CD Server
 - Java/Web based
+- De facto standard
 - Job as DSL
 - Many plugins
 @ulend
