@@ -1,5 +1,4 @@
-
----?image=template/img/begin.jpeg&title=Day1
+---?image=template/img/begin.jpeg
 <!---
 Day 1
 -->
@@ -17,7 +16,7 @@ Day 1
 ---?include=template/md/best-practice/PITCHME.md
 
 
----?image=template/img/begin.jpeg&title=Day2
+---?image=template/img/begin.jpeg
 <!---
 Day 2
 -->
