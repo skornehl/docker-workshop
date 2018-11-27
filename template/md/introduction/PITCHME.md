@@ -31,7 +31,10 @@ AWS @fa[arrow-left] <br/>
 - Big Picture
 - Architecture
 - Typical Workflow
-- Docker Compose
+- Registries
+- Volumes
+- Network
+- Best Practices
 @ulend
 @snapend
 
