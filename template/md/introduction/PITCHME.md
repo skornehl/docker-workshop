@@ -32,7 +32,6 @@ AWS @fa[arrow-left] <br/>
 - Architecture
 - Typical Workflow
 - Registries
-- Volumes
 - Network
 - Best Practices
 @ulend

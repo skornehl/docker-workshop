@@ -13,13 +13,4 @@
 ### Overview
 @snapend
 
-@snap[west span-100]
-@ul[](false)
-- Dockerhub
-- Quay (CoreOS/Red Hat)
-- ECR (AWS)
-- ACR (Azure)
-- gcr  (Google)
-- local / On-Prem
-@ulend
-@snapend
+![types-of-mounts-bind.png](template/img/types-of-mounts-bind.png)
