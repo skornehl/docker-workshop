@@ -1,7 +1,7 @@
 ---?image=template/img/begin.jpeg
 
-@snap[west text-white span-100]
-@fa[terminal fa-2x](Docker Workshop)<br/><br/>
+@snap[north text-white span-100]
+@fa[terminal fa-2x](Docker Workshop)
 @snapend
 
 <!---
