@@ -7,41 +7,56 @@
 @snapend
 
 +++
-
-@title[Guidelines]
-
+@title[Best Practices]
 @snap[north-west]
-### Best Practices
+### Best Practices 1/n
 @snapend
-
 @snap[north-east]
 ### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices)
 @snapend
-<br/>
+Containers should be ephemeral
 
-- Containers should be ephemeral
-- Use a .dockerignore file
-- Use small base images
-- Use tags
-- Group common operations
-- Avoid installing unnecessary packages
-- Run only one process per container
-- Minimize the number of layers
-- Order of the statements matters
 
 +++
-
-@title[Guidelines]
-
+@title[Best Practices]
 @snap[north-west]
-### Best Practices
+### Best Practices 2/n
 @snapend
+Run only one process per container
 
-@snap[north-east]
-### <br/>[@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices)
+
++++
+@title[Best Practices]
+@snap[north-west]
+### Best Practices 3/n
 @snapend
-<br/>
-- Sort mult-line arguments and indent 4 spaces:
+Avoid installing unnecessary packages
+
+Use a .dockerignore file
+
+Use small base images
+
+Minimize the number of layers
+
+
++++
+@title[Best Practices]
+@snap[north-west]
+### Best Practices 4/n
+@snapend
+Group common operations
+
+Order of the statements matters
+
+Use tags
+
+
++++
+@title[Best Practices]
+@snap[north-west]
+### Best Practices 5/n
+@snapend
+Sort mult-line arguments and indent 4 spaces
 ```
 RUN apt-get update && apt-get install --yes \
     cvs \
@@ -49,25 +64,19 @@ RUN apt-get update && apt-get install --yes \
     mercurial \
     subversion
 ```
-- Build Cache
-  - CACHING: Use whenever possible. Saves time.
-  - DISABLE: ```docker build --no-cache=true -t NAME:TAG .```
 
-+++ 
 
-@title[Guidelines]
-
++++
+@title[Best Practices]
 @snap[north-west]
-### Best Practices
+### Best Practices 6/n
 @snapend
+Build Cache
+- CACHING: Use whenever possible. Saves time.
+- DISABLE: ```docker build --no-cache=true -t NAME:TAG .```
+- CHECKSUMS: For ADD and COPY the contents of the file(s) in the image are examined and a checksum is calculated for each file.
+- NO CACHE LOOKUP: All other commands are not evaluted on a file level to determine a cache match/hit.
 
-@snap[north-east]
-### <br/>[@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices)
-@snapend
-<br/>
-- Build Cache
-  - CHECKSUMS: For ADD and COPY the contents of the file(s) in the image are examined and a checksum is calculated for each file.
-  - NO CACHE LOOKUP: All other commands are not evaluted on a file level to determine a cache match/hit.
 
 +++
 
@@ -76,21 +85,17 @@ RUN apt-get update && apt-get install --yes \
 @snap[north-west]
 ### Best Practices
 @snapend
-
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
-@snapend
-<br/>
-
-- **FROM**: use current official Repositories,
+`FROM`: use current official Repositories,
     e.g. Debian is tightly controlled and kept minimal: 150 mb.
-- **RUN**: split long or complex RUN statements on multiple lines separated
-  ```
-  RUN command-1 \
-    command-2 \
-    command-3
+
+`RUN`: split long or complex RUN statements on multiple lines separated
     ```
-- **Avoid** RUN apt-get upgrade or dist-upgrade
+    RUN command-1 \
+        command-2 \
+        command-3
+    ```
+
+**Avoid** `RUN apt-get upgrade` or `dist-upgrade`
 +++
 
 @title[Guidelines]
