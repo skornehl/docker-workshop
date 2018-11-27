@@ -132,9 +132,12 @@ Inheritance is support by using the extends field or by creating multiple Compos
 @snapend
 
 @snap[west span-100]
-1. Define your app environment via Dockerfile (if needed)
-2. Define services in docker-compose.yml file
-3. Run docker-compose up
+@ol[](false)
+- Define your app environment via Dockerfile (if needed)
+- Define services in docker-compose.yml file
+- Run docker-compose up
+@olend
+
 @snapend
 
 +++
