@@ -147,14 +147,20 @@ Inheritance is support by using the extends field or by creating multiple Compos
 ### Exercise
 @snapend
 
-@snap[west split-screen-heading span-40]
-@ol[split-screen-list](false)
+@snap[west]
+@ol[](false)
 - Create Wordpress application with MySQL
 - Connect from localhost 
 @olend
 @snapend
 
-@snap[east span-55]
++++
+@title[Hint]
+
+@snap[north-west]
+### Hint
+@snapend
+
 ```yaml
 version: '3'
 
@@ -172,4 +178,3 @@ services:
      ports:
        - <ports to be exposed>
 ```
-@snapend
