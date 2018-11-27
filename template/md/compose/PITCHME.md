@@ -178,13 +178,13 @@ services:
      ports:
        - <ports to be exposed>
 ```
-+++?code=template/md/compose/wordpress-compose.yml?lang=yaml&title=Answer
++++?code=template/md/compose/wordpress-compose.1.yml?lang=yaml&title=Answer
 @title[Answer]
 
 @[1]
 @[3]
-@[4-13]
-@[15-25]
+@[4-11]
+@[13-23]
 
 +++
 @title[Exercise]
@@ -212,29 +212,51 @@ services:
 @ol[](false)
 - Start the application and sign in
 - Is your account stored after restart?
-- Mount a volume into the db container to persist data
-  - Use a local folder
-  - The folder to be mounted is `/var/lib/mysql`
+- Mount a volume into the db container
+  * Use a local folder
+  * The folder to be mounted is `/var/lib/mysql`
 - Start the application and sign in
 - After restart the data should not get lost
 @olend
 @snapend
 
-+++
++++?code=template/md/compose/wordpress-compose.2.yml?lang=yaml&title=Answer
 @title[Answer]
 
+@[3-13]
+@[7]
+
++++
+@title[Exercise]
+
 @snap[north-west]
-### Answer
+### Exercise
 @snapend
 
 @snap[west]
 @ol[](false)
-- Start the application and sign in
-- Is your account stored after restart?
-- Mount a volume into the db container to persist data
-  - Use a local folder
-  - The folder to be mounted is `/var/lib/mysql`
-- Start the application and sign in
-- After restart the data should not get lost
+- Define a volume in the docker-compose.yml
+- Replace the local folder with the volume name
+- Start the application
+- List all volumes and inspect the newly created
+- Tear down the application
+- Delete the volume
+- Start the application
+- Is your data still available?
 @olend
 @snapend
+
++++?code=template/md/compose/wordpress-compose.yml?lang=yaml&title=Answer
+@title[Answer]
+
+@[3-13]
+@[7]
+@[26-27]
+
++++?code=template/md/compose/docker-volume.sh?lang=sh&title=Answer
+@title[Answer]
+
+@[1-2]
+@[4-5]
+@[7-8]
+@[10-11]
