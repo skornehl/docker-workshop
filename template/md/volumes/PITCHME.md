@@ -26,8 +26,8 @@
 ### [@fa[info]](https://docs.docker.com/engine/reference/commandline/volume) 
 @box[bg-gray rounded](docker volume [COMMAND])
 @snapend
+<br/>
 
-@snap[west]
 Parameter | Description
 ------------ | -------------
 create | Create a volume
@@ -35,7 +35,6 @@ inspect | Display detailed information
 ls | List volumes
 prune | Remove all unused local volumes
 rm | Remove volume
-@snapend
 
 +++
 @title[CLI reference]
@@ -48,15 +47,13 @@ rm | Remove volume
 ### [@fa[info]](https://docs.docker.com/engine/reference/commandline/volume_create) 
 @box[bg-gray rounded](docker volume create [OPTIONS] [VOLUME])
 @snapend
-
-@snap[west]
+<br/>
 Parameter | Description
 ------------ | -------------
 -d | Driver (default: local)
 --label | Metadata
 --name | Volume name
 -o | Options
-@snapend
 
 +++
 @title[Example tmpfs]
