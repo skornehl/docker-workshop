@@ -245,14 +245,14 @@ Parameter | Description
 +++?code=template/md/cli/index.html?title=index.html
 @title[index.html]
 @snap[north-west]
-### Exercise
+### Exercise (Answer)
 #### index.html
 @snapend
 
 +++?code=template/md/cli/Dockerfile?title=Dockerfile
 @title[Dockerfile]
 @snap[north-west]
-### Exercise
+### Exercise (Answer)
 #### Dockerfile
 @snapend
 
