@@ -252,6 +252,10 @@ Parameter | Description
 
 +++?code=template/md/cli/dockerfile.sh?lang=sh&title=Answer
 @title[Answer]
+@snap[north-west]
+### Exercise
+#### Answer
+@snapend
 
 @[1-2]
 @[4-5]
@@ -261,17 +265,22 @@ Parameter | Description
 
 +++
 @title[Layer]
-
 @snap[north-west]
 ### Layer
 @snapend
 ![layer](template/img/layers.png)
 
 +++?code=template/md/cli/Dockerfile-multistage?title=Dockerfile_multistage
+@snap[north-west]
+### Dockerfile, multistage
+@snapend
 @[1-5]
 @[7-11]
 
 +++?code=template/md/cli/busybox-static?lang=sh&title=From_scratch
+@snap[north-west]
+### FROM scratch
+@snapend
 @snap[north-east]
 ### [@fa[info]](https://github.com/docker-library/busybox/blob/master/uclibc/Dockerfile.builder)
 @snapend
