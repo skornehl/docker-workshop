@@ -76,15 +76,15 @@ Parameter | Description
 @snapend
 ```
 # --mount
-docker run -d 
+docker run -d \
   --name devtest 
-  --mount source=myvol2,target=/app 
+  --mount source=myvol2,target=/app \
   nginx:latest
 
 # -v
-docker run -d 
-  --name devtest 
-  -v myvol2:/app 
+docker run -d \
+  --name devtest \
+  -v myvol2:/app \
   nginx:latest
 ```
 @[1-5]
