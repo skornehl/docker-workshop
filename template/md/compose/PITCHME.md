@@ -70,7 +70,7 @@ __Single host deployments:__
 ### [@fa[info]](https://docs.docker.com/compose/overview/#features)
 @snapend
 
-@snap[east]
+@snap[west]
 __Multiple isolated environments on a single host__
 A project name can used to isolate environments, e.g.:
 
