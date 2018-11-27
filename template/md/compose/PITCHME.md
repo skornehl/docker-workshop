@@ -37,10 +37,12 @@
 ### [@fa[info]](https://docs.docker.com/compose/overview/#common-use-cases)
 @snapend
 
+@snap[west]
 __Development environments:__
 * running web apps in an isolated environment is crucial
 * the Compose file allows to document service dependencies
 * multi-page “developer getting started guides” can be avoided
+@snapend
 
 +++
 @title[Use Cases]
@@ -53,11 +55,13 @@ __Development environments:__
 ### [@fa[info]](https://docs.docker.com/compose/overview/#common-use-cases)
 @snapend
 
+@snap[west]
 __Automated testing environments:__
 * create & destroy isolated testing environments easily
  
 __Single host deployments:__
 * deploy to a remote Docker Engine or Swarm cluster
+@snapend
 
 +++
 @title[Features]
@@ -71,11 +75,11 @@ __Single host deployments:__
 @snapend
 
 @snap[west]
-__Multiple isolated environments on a single host__
-A project name can used to isolate environments, e.g.:
-
-**Dev host**: multiple copies of single env (= feature branch names)
-**CI server**: do not allow builds to interfer (= unique build number)
+__Multiple isolated environments on a single host__<br/>
+A project name can used to isolate environments, e.g.:<br/>
+<br/>
+**Dev host**: multiple copies of single env (= feature branch names)<br/>
+**CI server**: do not allow builds to interfer (= unique build number)<br/>
 **Shared host**: prevent different projects which may use same service names from interfering with each other
 @snapend
 
@@ -90,11 +94,13 @@ A project name can used to isolate environments, e.g.:
 ### [@fa[info]](https://docs.docker.com/compose/overview/#features)
 @snapend
 
-__Preserve volume data when containers are created__
-When docker-compose up runs it finds any containers from previous runs and copies the volumes from the old container to the new container
-
-__Only recreate containers that are changed__
+@snap[west]
+__Preserve volume data when containers are created__<br/>
+When docker-compose up runs it finds any containers from previous runs and copies the volumes from the old container to the new container<br/>
+<br/>
+__Only recreate containers that are changed__<br/>
 When a services restarts and nothing has changed Compose re-uses existing containers because it caches the configuration that was used to create a container
+@snapend
 
 +++
 @title[Features]
@@ -107,9 +113,11 @@ When a services restarts and nothing has changed Compose re-uses existing contai
 ### [@fa[info]](https://docs.docker.com/compose/overview/#features)
 @snapend
 
-__Variables and moving a compostion between environments__
+@snap[west]
+__Variables and moving a compostion between environments__<br/>
 Variables in the Compose file can be used to customize your composition for different environments or users.<br/>
 Inheritance is support by using the extends field or by creating multiple Compose files.
+@snapend
 
 +++
 @title[Process]
