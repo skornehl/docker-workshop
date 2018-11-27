@@ -162,7 +162,7 @@ Inheritance is support by using the extends field or by creating multiple Compos
 @snapend
 
 ```yaml
-version: '3'
+version: '3.3'
 
 services:
    <service-1>:
@@ -178,7 +178,7 @@ services:
      ports:
        - <ports to be exposed>
 ```
-+++?code=template/md/compose/wordpress-compose.yml?lang=sh&title=Solution
++++?code=template/md/compose/wordpress-compose.yml?lang=yaml&title=Solution
 @title[Solution]
 
 @[1]
