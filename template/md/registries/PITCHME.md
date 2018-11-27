@@ -114,8 +114,7 @@
 +++?code=template/md/registries/start-local-registry.sh?lang=sh
 @title[Answer]
 @snap[north-west]
-### Exercise
-#### Answer
+### Exercise (Answer)
 @snapend
 
 @[1-2]

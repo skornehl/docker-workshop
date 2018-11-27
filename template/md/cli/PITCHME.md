@@ -125,8 +125,11 @@ Parameter | Description
 @ulend
 @snapend
 
-+++?code=template/md/cli/first-container.sh?lang=sh&title=Answer
++++?code=template/md/cli/first-container.sh?lang=sh
 @title[Answer]
+@snap[north-west]
+### Exercise (Answer)
+@snapend
 
 @[1-2]
 @[4-5]
@@ -170,8 +173,11 @@ stats | Display container resource usage statistics
 @ulend
 @snapend
 
-+++?code=template/md/cli/monitoring.sh?lang=sh&title=Answer
++++?code=template/md/cli/monitoring.sh?lang=sh
 @title[Answer]
+@snap[north-west]
+### Exercise (Answer)
+@snapend
 
 @[1-2]
 @[4-5]
@@ -253,8 +259,7 @@ Parameter | Description
 +++?code=template/md/cli/dockerfile.sh?lang=sh
 @title[Answer]
 @snap[north-west]
-### Exercise
-#### Answer
+### Exercise (Answer)
 @snapend
 
 @[1-2]
