@@ -69,10 +69,38 @@
 @olend
 @snapend
 
-+++?code=template/md/network/example.sh?lang=sh&title=Answer
-@title[Answer]
++++
+@title[Exercise]
 
-@[1-3]
-@[5-6]
-@[8-13]
-@[15-19]
+@snap[north-west]
+### Exercise
+@snapend
+
+@snap[west span-100]
+@ol[](false)
+- Upload your docker-compose file with wordpress
+- Deploy it into your Swarm cluster
+- Find out where your containers are
+- Scale wordpress to 3
+@olend
+@snapend
+
++++
+@title[Answer]
+```sh
+# Deploy compose file
+docker deploy --compose-file=wordpress-compose.yml WORDPRESS
+
+# List local container
+docker ps
+
+# List Service
+docker service ls
+
+# Scale
+docker service scale WORDPRESS_wordpress=3
+```
+
+@[1-2]
+@[4-5]
+
