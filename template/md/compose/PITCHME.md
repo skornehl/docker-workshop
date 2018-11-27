@@ -39,9 +39,9 @@
 
 @snap[west]
 __Development environments:__<br/>
-* running web apps in an isolated environment is crucial
-* the Compose file allows to document service dependencies
-* multi-page “developer getting started guides” can be avoided
+- running web apps in an isolated environment is crucial
+- the Compose file allows to document service dependencies
+- multi-page “developer getting started guides” can be avoided
 @snapend
 
 +++
@@ -57,10 +57,10 @@ __Development environments:__<br/>
 
 @snap[west]
 __Automated testing environments:__<br/>
-* create & destroy isolated testing environments easily
+- create & destroy isolated testing environments easily
  <br/>
 __Single host deployments:__<br/>
-* deploy to a remote Docker Engine or Swarm cluster
+- deploy to a remote Docker Engine or Swarm cluster
 @snapend
 
 +++
@@ -141,8 +141,8 @@ Inheritance is support by using the extends field or by creating multiple Compos
 
 @snap[west split-screen-heading text-orange span-50]
 @ol[split-screen-list](false)
-* Create Wordpress application with MySQL
-* Connect from localhost 
+- Create Wordpress application with MySQL
+- Connect from localhost 
 @olend
 @snapend
 
