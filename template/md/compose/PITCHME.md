@@ -178,3 +178,11 @@ services:
      ports:
        - <ports to be exposed>
 ```
++++?code=template/md/compose/wordpress-compose.yml?lang=sh&title=Solution
+@title[Solution]
+
+@[1]
+@[3]
+@[4-13]
+@[15-25]
+@[26-27]
