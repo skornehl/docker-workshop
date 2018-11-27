@@ -99,7 +99,7 @@
 - Create two networks
 - Run a nginx container with name 'web1'
 - Start alpine container in same network and curl web1
-  (Hint: `bin/sh -c 'apk add curl; curl web1'`)
+  (Hint: `apk add curl; curl web1`)
 - Start same container again the other network and try curl
 @ulend
 @snapend
