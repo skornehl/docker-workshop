@@ -22,3 +22,28 @@
 - Many plugins
 @ulend
 @snapend
+
++++
+@title[Exercise]
+
+@snap[north-west]
+### Exercise
+@snapend
+
+@snap[west span-100]
+@ul[](false)
+- Start jenkins in docker
+- Connect to it using your browser
+- Add a freestyle job with a shell command
+- Build it
+- Look at the console output
+@ulend
+@snapend
+
++++
+@title[Answer]
+
+```
+# Run Jenkins
+docker run -d --rm -p 8080:8080 --env JAVA_OPTS="-Djenkins.install.runSetupWizard=false" jenkins
+```
