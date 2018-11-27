@@ -2,7 +2,7 @@
 
 @title[Docker compose]
 
-@snap[north text-white]
+@snap[south]
 ## Docker Compose
 @snapend
 
