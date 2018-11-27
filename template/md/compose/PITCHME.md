@@ -37,12 +37,21 @@
 ### [@fa[info]](https://docs.docker.com/compose/overview/#common-use-cases)
 @snapend
 
-@snap[west span-100]
-@ul[](false)
 Development environments:
 * running web apps in an isolated environment is crucial
 * the Compose file allows to document service dependencies
 * multi-page “developer getting started guides” can be avoided
+
++++
+@title[Use Cases]
+
+@snap[north-west]
+### Use Cases
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/compose/overview/#common-use-cases)
+@snapend
 
 Automated testing environments
 * create & destroy isolated testing environments easily
@@ -50,5 +59,3 @@ Automated testing environments
 Single host deployments
 * deploy to a remote Docker Engine or Swarm cluster
 * production-readiness of Docker Compose is coming
-@ulend
-@snapend
