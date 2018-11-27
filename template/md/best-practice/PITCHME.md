@@ -9,7 +9,7 @@
 +++
 @title[Best Practices]
 @snap[north-west]
-### Best Practices
+### Best Practices - ephemeral
 @snapend
 @snap[north-east]
 ### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices)
@@ -20,7 +20,7 @@ Containers should be ephemeral
 +++
 @title[Best Practices]
 @snap[north-west]
-### Best Practices
+### Best Practices - one process
 @snapend
 Run only one process per container
 
@@ -28,7 +28,7 @@ Run only one process per container
 +++
 @title[Best Practices]
 @snap[north-west]
-### Best Practices
+### Best Practices - size matters
 @snapend
 Avoid installing unnecessary packages
 
@@ -42,7 +42,7 @@ Minimize the number of layers
 +++
 @title[Best Practices]
 @snap[north-west]
-### Best Practices
+### Best Practices - order things
 @snapend
 Group common operations
 
@@ -54,7 +54,7 @@ Use tags
 +++
 @title[Best Practices]
 @snap[north-west]
-### Best Practices
+### Best Practices - split
 @snapend
 Sort mult-line arguments and indent 4 spaces
 ```
@@ -69,8 +69,7 @@ RUN apt-get update && apt-get install --yes \
 +++
 @title[Best Practices]
 @snap[north-west]
-### Best Practices
-#### Build Cache
+### Best Practices - build cache
 @snapend
 CACHING: Use whenever possible. Saves time.
 
@@ -80,8 +79,7 @@ DISABLE: ```docker build --no-cache=true -t NAME:TAG .```
 +++
 @title[Best Practices]
 @snap[north-west]
-### Best Practices
-#### Build Cache
+### Best Practices - Build Cache
 @snapend
 CHECKSUMS: For ADD and COPY the contents of the file(s) in the image are examined and a checksum is calculated for each file.
 
@@ -91,10 +89,8 @@ NO CACHE LOOKUP: All other commands are not evaluted on a file level to determin
 +++
 @title[Guidelines]
 @snap[north-west]
-### Best Practices
+### Best Practices - from directive
 @snapend
-`FROM`
-
 use current official Repositories,
 e.g. Debian is tightly controlled and kept minimal: 150 mb.
 
@@ -103,10 +99,8 @@ e.g. Debian is tightly controlled and kept minimal: 150 mb.
 +++
 @title[Guidelines]
 @snap[north-west]
-### Best Practices
+### Best Practices - run directive
 @snapend
-`RUN`
-
 split long or complex RUN statements on multiple lines
 ```
 RUN command-part-1 \
@@ -120,7 +114,7 @@ _Avoid apt-get upgrade or apt-get dist-upgrade._
 +++
 @title[Guidelines]
 @snap[north-west]
-### Best Practices
+### Best Practices - versions
 @snapend
 CACHE BUSTING: Always combine </br>`RUN apt-get update && apt-get install -y …`
 
@@ -131,13 +125,10 @@ VERSION PINNING: forces the build to retrieve a particular version
 +++
 @title[Guidelines]
 @snap[north-west]
-### Best Practices
+### Best Practices - cmd directive
 @snapend
-
-`CMD`
-
-alway use this format:</br>
-```CMD ["executable", "param1", "param2", …]```
+alway use the list format:</br>
+`CMD ["executable", "param1", "param2", …]`
 
 _with ENTRYPOINT as a kind of default parameter_
 
@@ -145,11 +136,8 @@ _with ENTRYPOINT as a kind of default parameter_
 +++
 @title[Guidelines]
 @snap[north-west]
-### Best Practices
+### Best Practices - expose directive
 @snapend
-
-`EXPOSE`
-
 use the common, traditional port for your application
 
 For container linking, Docker provides environment variables (eg MYSQL_PORT_3306_TCP)
@@ -158,13 +146,11 @@ For container linking, Docker provides environment variables (eg MYSQL_PORT_3306
 +++
 @title[Guidelines]
 @snap[north-west]
-### Best Practices
+### Best Practices - env directive
 @snapend
-`ENV`
-
 - Update path to ensure commands work:
     ```
-    ENV PATH /usr/local/nginx/bin:$PATH
+ENV PATH /usr/local/nginx/bin:$PATH
     ```
 - Provide needed env vars for services eg. Postgres PGDATA
 - Use for version numbers and pathes (like constant vars)
@@ -174,10 +160,8 @@ For container linking, Docker provides environment variables (eg MYSQL_PORT_3306
 +++
 @title[Guidelines]
 @snap[north-west]
-### Best Practices
+### Best Practices - copy directive
 @snapend
-`COPY`
-
 Beware of using ADD instead of COPY
 
 COPY only supports the basic copying of local files
@@ -194,10 +178,8 @@ COPY . /tmp/
 +++
 @title[Guidelines]
 @snap[north-west]
-### Best Practices
+### Best Practices - add directive
 @snapend
-`ADD`
-
 TAR AUTO-EXTRACTION
 
 Because image size matters, using ADD to fetch packages from remote URLs is strongly discouraged
