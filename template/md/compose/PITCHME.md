@@ -37,7 +37,7 @@
 ### [@fa[info]](https://docs.docker.com/compose/overview/#common-use-cases)
 @snapend
 
-Development environments:
+__Development environments:__
 * running web apps in an isolated environment is crucial
 * the Compose file allows to document service dependencies
 * multi-page “developer getting started guides” can be avoided
@@ -53,9 +53,58 @@ Development environments:
 ### [@fa[info]](https://docs.docker.com/compose/overview/#common-use-cases)
 @snapend
 
-Automated testing environments
+__Automated testing environments:__
 * create & destroy isolated testing environments easily
  
-Single host deployments
+__Single host deployments:__
 * deploy to a remote Docker Engine or Swarm cluster
-* production-readiness of Docker Compose is coming
+
++++
+@title[Features]
+
+@snap[north-west]
+### Features
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/compose/overview/#features)
+@snapend
+
+__Multiple isolated environments on a single host__
+A project name can used to isolate environments, e.g.:
+
+**Dev host**: multiple copies of single env (= feature branch names)
+**CI server**: do not allow builds to interfer (= unique build number)
+**Shared host**: prevent different projects which may use same service names from interfering with each other
+
++++
+@title[Features]
+
+@snap[north-west]
+### Features
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/compose/overview/#features)
+@snapend
+
+__Preserve volume data when containers are created__
+When docker-compose up runs it finds any containers from previous runs and copies the volumes from the old container to the new container
+
+__Only recreate containers that are changed__
+When a services restarts and nothing has changed Compose re-uses existing containers because it caches the configuration that was used to create a container
+
++++
+@title[Features]
+
+@snap[north-west]
+### Features
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/compose/overview/#features)
+@snapend
+
+__Variables and moving a compostion between environments__
+Variables in the Compose file can be used to customize your composition for different environments or users.<br/>
+Inheritance is support by using the extends field or by creating multiple Compose files.

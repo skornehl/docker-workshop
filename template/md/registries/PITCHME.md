@@ -97,10 +97,10 @@
 @snapend
 
 +++
-@title[Try it]
+@title[Exercise]
 
 @snap[north-west]
-### Try it
+### Exercise
 @snapend
 
 @snap[west span-100]

@@ -68,10 +68,10 @@ Parameter | Description
 -it | Interactive terminal with pseudo-TTY
 
 +++
-@title[Try it]
+@title[Exercise]
 
 @snap[north-west]
-### Try it
+### Exercise
 @snapend
 
 @snap[west span-100]
@@ -113,10 +113,10 @@ logs | Fetch the logs of a container
 stats | Display container resource usage statistics
 
 +++
-@title[Try it]
+@title[Exercise]
 
 @snap[north-west]
-### Try it
+### Exercise
 @snapend
 
 @snap[west span-100]
@@ -180,10 +180,10 @@ Parameter | Description
 -t | Set Tag
 
 +++
-@title[Try it]
+@title[Exercise]
 
 @snap[north-west]
-### Try it
+### Exercise
 @snapend
 
 @snap[west span-100]
