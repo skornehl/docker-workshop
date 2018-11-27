@@ -213,8 +213,8 @@ services:
 - Start the application and sign in
 - Is your account stored after restart?
 - Mount a volume into the db container
-  * Use a local folder
-  * The folder to be mounted is `/var/lib/mysql`
+  Use a local folder
+  The folder to be mounted is `/var/lib/mysql`
 - Start the application and sign in
 - After restart the data should not get lost
 @olend
