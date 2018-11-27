@@ -155,7 +155,7 @@ Inheritance is support by using the extends field or by creating multiple Compos
 @snapend
 
 @snap[east span-55]
-```
+```yaml
 version: '3'
 
 services:
