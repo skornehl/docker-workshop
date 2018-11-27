@@ -39,10 +39,16 @@
 
 @snap[west span-100]
 @ul[](false)
-- Tool for defining and running multi-container applications
-- YAML based
-- Single host deployments
-- Swarm deployments
-- Parametrized with ENV variables
+Development environments:
+* running web apps in an isolated environment is crucial
+* the Compose file allows to document service dependencies
+* multi-page “developer getting started guides” can be avoided
+
+Automated testing environments
+* create & destroy isolated testing environments easily
+ 
+Single host deployments
+* deploy to a remote Docker Engine or Swarm cluster
+* production-readiness of Docker Compose is coming
 @ulend
 @snapend
