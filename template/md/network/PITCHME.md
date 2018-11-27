@@ -103,8 +103,8 @@
 @ulend
 @snapend
 
-+++?code=template/md/network/example.sh?lang=sh&title=Solution
-@title[Solution]
++++?code=template/md/network/example.sh?lang=sh&title=Answer
+@title[Answer]
 
 @[1-3]
 @[5-6]

@@ -178,11 +178,63 @@ services:
      ports:
        - <ports to be exposed>
 ```
-+++?code=template/md/compose/wordpress-compose.yml?lang=yaml&title=Solution
-@title[Solution]
++++?code=template/md/compose/wordpress-compose.yml?lang=yaml&title=Answer
+@title[Answer]
 
 @[1]
 @[3]
 @[4-13]
 @[15-25]
-@[26-27]
+
++++
+@title[Exercise]
+
+@snap[north-west]
+### Exercise
+@snapend
+
+@snap[west]
+@ol[](false)
+- Are the containers deleted after finishing the process?
+- Run the environment in background (-d)
+- Tear down the services. Are the containers now deleted?
+@olend
+@snapend
+
++++
+@title[Exercise]
+
+@snap[north-west]
+### Exercise
+@snapend
+
+@snap[west]
+@ol[](false)
+- Start the application and sign in
+- Is your account stored after restart?
+- Mount a volume into the db container to persist data
+  - Use a local folder
+  - The folder to be mounted is `/var/lib/mysql`
+- Start the application and sign in
+- After restart the data should not get lost
+@olend
+@snapend
+
++++
+@title[Answer]
+
+@snap[north-west]
+### Answer
+@snapend
+
+@snap[west]
+@ol[](false)
+- Start the application and sign in
+- Is your account stored after restart?
+- Mount a volume into the db container to persist data
+  - Use a local folder
+  - The folder to be mounted is `/var/lib/mysql`
+- Start the application and sign in
+- After restart the data should not get lost
+@olend
+@snapend

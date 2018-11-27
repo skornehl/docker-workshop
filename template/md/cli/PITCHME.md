@@ -83,8 +83,8 @@ Parameter | Description
 @ulend
 @snapend
 
-+++?code=template/md/cli/first-container.sh?lang=sh&title=Solution
-@title[Solution]
++++?code=template/md/cli/first-container.sh?lang=sh&title=Answer
+@title[Answer]
 
 @[1-2]
 @[4-5]
@@ -128,8 +128,8 @@ stats | Display container resource usage statistics
 @ulend
 @snapend
 
-+++?code=template/md/cli/monitoring.sh?lang=sh&title=Solution
-@title[Solution]
++++?code=template/md/cli/monitoring.sh?lang=sh&title=Answer
+@title[Answer]
 
 @[1-2]
 @[4-5]
@@ -200,8 +200,8 @@ Parameter | Description
 +++?code=template/md/cli/Dockerfile?title=Dockerfile
 @title[Dockerfile]
 
-+++?code=template/md/cli/dockerfile.sh?lang=sh&title=Solution
-@title[Solution]
++++?code=template/md/cli/dockerfile.sh?lang=sh&title=Answer
+@title[Answer]
 
 @[1-2]
 @[4-5]

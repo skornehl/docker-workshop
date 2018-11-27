@@ -111,8 +111,8 @@
 @ulend
 @snapend
 
-+++?code=template/md/registries/start-local-registry.sh?lang=sh&title=Solution
-@title[Solution]
++++?code=template/md/registries/start-local-registry.sh?lang=sh&title=Answer
+@title[Answer]
 
 @[1-2]
 @[4-5]
