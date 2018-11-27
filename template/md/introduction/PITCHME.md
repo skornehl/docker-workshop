@@ -85,7 +85,7 @@ Ecosystem has developed around containers<br/>
 @title[Why should devs care? #1]
 
 @snap[north-west]
-### Why should devs care?
+### Why should devs care? 1/3
 @snapend
 
 @snap[west span-100]
@@ -93,6 +93,19 @@ Ecosystem has developed around containers<br/>
 - A fast, clean, safe, hygienic and portable runtime
 - Ensures all team members are using exactly the same tools
 - Ensures the build server is using exactly the same tools
+@ulend
+@snapend
+
+
++++
+@title[Why should devs care? #2]
+
+@snap[north-west]
+### Why should devs care? 2/3
+@snapend
+
+@snap[west span-100]
+@ul[](false)
 - No missing dependencies, packages and other pain points
 - Own isolated container, various versions of libraries
 - Automate testing, integration, packaging
@@ -100,10 +113,10 @@ Ecosystem has developed around containers<br/>
 @snapend
 
 +++
-@title[Why should devs care? #2]
+@title[Why should devs care? #3]
 
 @snap[north-west]
-### Why should devs care?
+### Why should devs care? 3/3
 @snapend
 
 @snap[west span-100]
@@ -119,7 +132,7 @@ Ecosystem has developed around containers<br/>
 @title[Why should ops care?]
 
 @snap[north-west]
-### Why should ops care?
+### Why should ops care? 1/2
 @snapend
 
 @snap[west span-100]
@@ -128,6 +141,21 @@ Ecosystem has developed around containers<br/>
 - Make lifecycle more efficient, consistent and repeatable
 - Increase the quality of code produced by devs
 - Eliminate inconsistencies between dev, test, prod and customer environments
+@ulend
+@snapend
+
+
+
++++
+@title[Why should ops care? #2]
+
+@snap[north-west]
+### Why should ops care? 2/2
+@snapend
+
+@snap[west span-100]
+<br/>
+@ul[](false)
 - Support segregation of duties
 - Significantly improve the speed and reliability of CI/CD
 - Lightweight, address significant performance issues, deployment costs
