@@ -65,7 +65,7 @@ Parameter | Description
 @snapend
 @ul[](false)
 - To bind mounts, all options for volumes are available for both --mount and -v flags.
-- When using volumes with services, only --mount is supported.
+- When using volumes with services (Swarm), only --mount is supported.
 @ulend
 
 +++
