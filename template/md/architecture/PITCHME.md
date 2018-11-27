@@ -10,16 +10,25 @@
 @title[Runtime]
 
 @snap[north-west]
-### Runtime
+### Components
 @snapend
 
 @snap[west span-100]
-Docker Engine (free/commercial)<br/>
-Docker Compose<br/>
-Docker Machine<br/>
-Docker Swarm<br/>
-Kubernetes
+@ul[](false)
+- Docker server/daemon (_dockerd_)
+- Docker client/CLI (_docker_)
+- Docker registries
+- Docker objects: images, containers, networks, volumes, services
+@ulend
 @snapend
+
++++
+@title[Docker Engine]
+
+@snap[north-west]
+### Docker Engine
+@snapend
+![engine-components-flow](template/img/engine-components-flow.png)
 
 +++
 @title[Registries]
@@ -46,14 +55,6 @@ Docker Store (beta, commercial)<br/>
 Docker Cloud (service, depends on providers)<br/>
 vs. Docker Datacenter with DTR & UCP (enterprise)<br/>
 @snapend
-
-+++
-@title[Docker Engine]
-
-@snap[north-west]
-### Docker Engine
-@snapend
-![engine-components-flow](template/img/engine-components-flow.png)
 
 +++
 @title[How it fits together]
