@@ -23,6 +23,14 @@
 @snapend
 
 +++
+@title[Docker Engine]
+
+@snap[north-west]
+### Docker Engine
+@snapend
+![engine-components-flow](template/img/engine-components-flow.png)
+
++++
 @title[Registries]
 
 @snap[north-west]
@@ -47,14 +55,6 @@ Docker Store (beta, commercial)<br/>
 Docker Cloud (service, depends on providers)<br/>
 vs. Docker Datacenter with DTR & UCP (enterprise)<br/>
 @snapend
-
-+++
-@title[Docker Engine]
-
-@snap[north-west]
-### Docker Engine
-@snapend
-![engine-components-flow](template/img/engine-components-flow.png)
 
 +++
 @title[How it fits together]
