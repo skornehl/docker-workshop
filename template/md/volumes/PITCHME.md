@@ -27,6 +27,7 @@
 @box[bg-gray rounded](docker volume [COMMAND])
 @snapend
 
+@snap[west]
 Parameter | Description
 ------------ | -------------
 create | Create a volume
@@ -34,6 +35,7 @@ inspect | Display detailed information
 ls | List volumes
 prune | Remove all unused local volumes
 rm | Remove volume
+@snapend
 
 +++
 @title[CLI reference]
@@ -47,12 +49,14 @@ rm | Remove volume
 @box[bg-gray rounded](docker volume create [OPTIONS] [VOLUME])
 @snapend
 
+@snap[west]
 Parameter | Description
 ------------ | -------------
 -d | Driver (default: local)
 --label | Metadata
 --name | Volume name
 -o | Options
+@snapend
 
 +++
 @title[Example tmpfs]
