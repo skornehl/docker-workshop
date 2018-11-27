@@ -1,7 +1,7 @@
----?image=template/img/compose.jpeg&title=Compose
+---?image=template/img/compose.jpeg
 
 @snap[west text-white span-100]
-@fa[terminal fa-2x](Docker Compose)<br/><br/>
+@fa[fa-2x](Docker Compose)<br/><br/>
 @snapend
 
 @snap[north]
