@@ -1,10 +1,8 @@
 ---?image=template/img/compose.jpeg
 
-@snap[west text-white span-100]
-@fa[fa-2x](Docker Compose)<br/><br/>
-@snapend
+@title[Docker compose]
 
-@snap[north]
+@snap[north text-white]
 ## Docker Compose
 @snapend
 
