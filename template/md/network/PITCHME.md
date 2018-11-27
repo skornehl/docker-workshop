@@ -2,8 +2,8 @@
 
 @title[Docker network]
 
-@snap[north]
-## Docker network
+@snap[north text-black span-100]
+@fa[terminal fa-2x](Docker network)
 @snapend
 
 +++

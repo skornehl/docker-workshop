@@ -2,8 +2,8 @@
 
 @title[Docker Volumes]
 
-@snap[north]
-## Docker Volumes
+@snap[north text-black span-100]
+@fa[terminal fa-2x](Docker Volumes)
 @snapend
 
 +++

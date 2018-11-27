@@ -2,8 +2,8 @@
 
 @title[Docker compose]
 
-@snap[south]
-## Docker Compose
+@snap[north text-white span-100]
+@fa[terminal fa-2x](Docker Compose)
 @snapend
 
 +++

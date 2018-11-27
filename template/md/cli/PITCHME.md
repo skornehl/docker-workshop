@@ -2,8 +2,8 @@
 
 @title[Typical Local Workflow with CLI]
 
-@snap[north]
-## Typical Local Workflow with CLI
+@snap[north text-black span-100]
+@fa[terminal fa-2x](Typical Local Workflow with CLI)
 @snapend
 
 +++

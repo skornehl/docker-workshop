@@ -2,8 +2,8 @@
 
 @title[Docker Architecture]
 
-@snap[north]
-## Docker Architecture
+@snap[north text-black span-100]
+@fa[terminal fa-2x](Docker Architecture)
 @snapend
 
 +++

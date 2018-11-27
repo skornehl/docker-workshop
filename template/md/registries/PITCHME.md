@@ -2,8 +2,8 @@
 
 @title[Docker Registries]
 
-@snap[north]
-## Docker Registries
+@snap[north text-black span-100]
+@fa[terminal fa-2x](Docker Registries)
 @snapend
 
 +++
