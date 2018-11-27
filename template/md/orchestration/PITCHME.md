@@ -2,7 +2,7 @@
 
 @title[Docker orchestration]
 
-@snap[north text-black span-100]
+@snap[north text-white span-100]
 @fa[terminal fa-2x](Docker orchestration)
 @snapend
 
