@@ -147,14 +147,14 @@ Inheritance is support by using the extends field or by creating multiple Compos
 ### Exercise
 @snapend
 
-@snap[west split-screen-heading text-orange span-50]
+@snap[west split-screen-heading span-40]
 @ol[split-screen-list](false)
 - Create Wordpress application with MySQL
 - Connect from localhost 
 @olend
 @snapend
 
-@snap[east text-white span-45]
+@snap[east span-55]
 ```
 version: '3'
 
