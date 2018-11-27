@@ -16,7 +16,7 @@
 @snap[west span-100]
 @ul[](false)
 - Docker server/daemon (_dockerd_)
-- Docker client/CLI (_docker_)
+- Docker client/CLI (_docker engine_)
 - Docker registries
 - Docker objects: images, containers, networks, volumes, services
 @ulend

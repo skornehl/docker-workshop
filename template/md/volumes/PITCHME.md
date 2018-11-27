@@ -72,3 +72,32 @@ docker volume create --driver local \
 # Mount into container
 docker run -it --rm -v foo:/foo busybox df -h
 ```
+
++++
+@title[Example btrfs]
+
+@snap[north-west]
+### Example btrfs 
+@snapend
+
+```
+# Create btrfs
+docker volume create --driver local \
+    --opt type=btrfs \
+    --opt device=/dev/sda2 \
+    foo
+```
++++
+@title[Example nfs]
+
+@snap[north-west]
+### Example nfs 
+@snapend
+
+```
+# Create nfs
+docker volume create --driver local \
+    --opt type=nfs \
+    --opt o=addr=192.168.1.1,rw \
+    --opt device=:/path/to/dir \
+```
