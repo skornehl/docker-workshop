@@ -7,41 +7,56 @@
 @snapend
 
 +++
-
-@title[Guidelines]
-
+@title[Best Practices]
 @snap[north-west]
-### Best Practices
+### Best Practices - ephemeral
 @snapend
-
 @snap[north-east]
 ### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices)
 @snapend
-<br/>
+Containers should be ephemeral
 
-- Containers should be ephemeral
-- Use a .dockerignore file
-- Use small base images
-- Use tags
-- Group common operations
-- Avoid installing unnecessary packages
-- Run only one process per container
-- Minimize the number of layers
-- Order of the statements matters
 
 +++
-
-@title[Guidelines]
-
+@title[Best Practices]
 @snap[north-west]
-### Best Practices
+### Best Practices - one process
 @snapend
+Run only one process per container
 
-@snap[north-east]
-### <br/>[@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices)
+
++++
+@title[Best Practices]
+@snap[north-west]
+### Best Practices - size matters
 @snapend
-<br/>
-- Sort mult-line arguments and indent 4 spaces:
+Avoid installing unnecessary packages
+
+Use a .dockerignore file
+
+Use small base images
+
+Minimize the number of layers
+
+
++++
+@title[Best Practices]
+@snap[north-west]
+### Best Practices - order things
+@snapend
+Group common operations
+
+Order of the statements matters
+
+Use tags
+
+
++++
+@title[Best Practices]
+@snap[north-west]
+### Best Practices - split
+@snapend
+Sort mult-line arguments and indent 4 spaces
 ```
 RUN apt-get update && apt-get install --yes \
     cvs \
@@ -49,140 +64,131 @@ RUN apt-get update && apt-get install --yes \
     mercurial \
     subversion
 ```
-- Build Cache
-  - CACHING: Use whenever possible. Saves time.
-  - DISABLE: ```docker build --no-cache=true -t NAME:TAG .```
 
-+++ 
-
-@title[Guidelines]
-
-@snap[north-west]
-### Best Practices
-@snapend
-
-@snap[north-east]
-### <br/>[@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices)
-@snapend
-<br/>
-- Build Cache
-  - CHECKSUMS: For ADD and COPY the contents of the file(s) in the image are examined and a checksum is calculated for each file.
-  - NO CACHE LOOKUP: All other commands are not evaluted on a file level to determine a cache match/hit.
 
 +++
-
-@title[Guidelines]
-
+@title[Best Practices]
 @snap[north-west]
-### Best Practices
+### Best Practices - build cache
 @snapend
+CACHING: Use whenever possible. Saves time.
 
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
+DISABLE: ```docker build --no-cache=true -t NAME:TAG .```
+
+
++++
+@title[Best Practices]
+@snap[north-west]
+### Best Practices - Build Cache
 @snapend
-<br/>
+CHECKSUMS: For ADD and COPY the contents of the file(s) in the image are examined and a checksum is calculated for each file.
 
-- **FROM**: use current official Repositories,
-    e.g. Debian is tightly controlled and kept minimal: 150 mb.
-- **RUN**: split long or complex RUN statements on multiple lines separated
-  ```
-  RUN command-1 \
-    command-2 \
-    command-3
+NO CACHE LOOKUP: All other commands are not evaluted on a file level to determine a cache match/hit.
+
+
++++
+@title[Guidelines]
+@snap[north-west]
+### Best Practices - from directive
+@snapend
+use current official Repositories,
+e.g. Debian is tightly controlled and kept minimal: 150 mb.
+
+
+
++++
+@title[Guidelines]
+@snap[north-west]
+### Best Practices - run directive
+@snapend
+split long or complex RUN statements on multiple lines
+```
+RUN command-part-1 \
+    command-part-2 \
+    command-part-3
+```
+
+_Avoid apt-get upgrade or apt-get dist-upgrade._
+
+
++++
+@title[Guidelines]
+@snap[north-west]
+### Best Practices - versions
+@snapend
+CACHE BUSTING: Always combine </br>`RUN apt-get update && apt-get install -y …`
+
+VERSION PINNING: forces the build to retrieve a particular version
+
+
+
++++
+@title[Guidelines]
+@snap[north-west]
+### Best Practices - cmd directive
+@snapend
+alway use the list format:</br>
+`CMD ["executable", "param1", "param2", …]`
+
+_with ENTRYPOINT as a kind of default parameter_
+
+
++++
+@title[Guidelines]
+@snap[north-west]
+### Best Practices - expose directive
+@snapend
+use the common, traditional port for your application
+
+For container linking, Docker provides environment variables (eg MYSQL_PORT_3306_TCP)
+
+
++++
+@title[Guidelines]
+@snap[north-west]
+### Best Practices - env directive
+@snapend
+- Update path to ensure commands work:
     ```
-- **Avoid** RUN apt-get upgrade or dist-upgrade
-+++
-
-@title[Guidelines]
-
-@snap[north-west]
-### Best Practices
-@snapend
-
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
-@snapend
-<br/>
-- **RUN** apt-get update
-  - **CACHE BUSTING**: Always combine RUN apt-get update && apt-get install -y 
-- **VERSION PINNING** forces the build to retrieve a particular version
-- **CMD**
-    - alway use this format:
-    ```CMD ["executable", "param1", "param2"…]```
-    - with ENTRYPOINT is a kind of default parameter
-+++
-
-@title[Guidelines]
-
-@snap[north-west]
-### Best Practices
-@snapend
-
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
-@snapend
-- **EXPOSE**: 
-    - use the common, traditional port for your application
-    - For container linking, Docker provides environment variables (ie, MYSQL_PORT_3306_TCP)
-+++
-
-@title[Guidelines]
-
-@snap[north-west]
-### Best Practices
-@snapend
-
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
-@snapend
-- **ENV**
-    - Update path to ensure commands work:
+ENV PATH /usr/local/nginx/bin:$PATH
     ```
-    ENV PATH /usr/local/nginx/bin:$PATH
-    ```
-    - Provide needed env vars for services eg. Postgres PGDATA
-    - Use for version numbers and pathes (like constant vars)
+- Provide needed env vars for services eg. Postgres PGDATA
+- Use for version numbers and pathes (like constant vars)
+
+
+
 +++
-
 @title[Guidelines]
-
 @snap[north-west]
-### Best Practices
+### Best Practices - copy directive
 @snapend
+Beware of using ADD instead of COPY
 
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
-@snapend
-- **COPY**
-    - Beware of using ADD instead of COPY
-    - COPY only supports the basic copying of local files
-    - FEWER CACHE INVALIDATIONS: Reuse multiple COPY steps individually.
-    ```
+COPY only supports the basic copying of local files
+
+FEWER CACHE INVALIDATIONS: Reuse multiple COPY steps individually.
+
+```
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 COPY . /tmp/
-    ```
+```
+
 
 +++
-
 @title[Guidelines]
-
 @snap[north-west]
-### Best Practices
+### Best Practices - add directive
 @snapend
+TAR AUTO-EXTRACTION
 
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
-@snapend
-- **ADD**
-    - TAR AUTO-EXTRACTION
-    - Because image size matters, using ADD to fetch packages from remote URLs is strongly discouraged
+Because image size matters, using ADD to fetch packages from remote URLs is strongly discouraged
 +++
 
 @title[Clean Up]
 
 @snap[north-west]
-### Clean up command
+### Clean up commands
 @snapend
 
 ```

@@ -95,17 +95,20 @@
 @snapend
 
 @snap[west span-100]
-@ul[](false)
+@ol[](false)
 - Create two networks
 - Run a nginx container with name 'web1'
 - Start alpine container in same network and curl web1
   (Hint: `apk add curl; curl web1`)
-- Start same container again the other network and try curl
-@ulend
+- Start same container again in the other network and try curl
+@olend
 @snapend
 
-+++?code=template/md/network/example.sh?lang=sh&title=Answer
++++?code=template/md/network/example.sh?lang=sh
 @title[Answer]
+@snap[north-west]
+### Exercise (Answer)
+@snapend
 
 @[1-3]
 @[5-6]
