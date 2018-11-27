@@ -1,7 +1,7 @@
 ---?image=template/img/begin.jpeg
 
 @snap[north text-white span-100]
-@fa[terminal fa-2x](Docker Workshop)
+@fa[terminal fa-2x](Docker Workshop<br> Day 1)
 @snapend
 
 <!---
@@ -14,6 +14,10 @@ Day 1
 ---?include=template/md/volumes/PITCHME.md
 ---?include=template/md/network/PITCHME.md
 ---?include=template/md/best-practice/PITCHME.md
+
+@snap[north text-white span-100]
+@fa[terminal fa-2x](Docker Workshop<br> Day 2)
+@snapend
 
 <!---
 Day 2
