@@ -1,65 +1,23 @@
----?image=template/img/architecture.jpeg
+---?image=template/img/docker-jenkins.png
 
-@title[Docker Architecture]
+@title[CI/CD with Docker]
 
 @snap[north text-black span-100]
-@fa[terminal fa-2x](Docker Architecture)
+@fa[terminal fa-2x](CI/CD with Docker)
 @snapend
 
 +++
-@title[Runtime]
+@title[Jenkins]
 
 @snap[north-west]
-### Components
+### Jenkins overview
 @snapend
 
 @snap[west span-100]
 @ul[](false)
-- Docker server/daemon (_dockerd_)
-- Docker client/CLI (_docker engine_)
-- Docker registries
-- Docker objects: images, containers, networks, volumes, services
+- CI/CD Server
+- Java/Web based
+- Job as DSL
+- Many plugins
 @ulend
 @snapend
-
-+++
-@title[Docker Engine]
-
-@snap[north-west]
-### Docker Engine
-@snapend
-![engine-components-flow](template/img/engine-components-flow.png)
-
-+++
-@title[Registries]
-
-@snap[north-west]
-### Registries
-@snapend
-
-@snap[west span-100]
-Docker Hub (service, public/private)<br/>
-vs. Docker Registry (free, CLI only)<br/>
-vs. Docker Trusted Registry (enterprise)<br/>
-@snapend
-
-+++
-@title[Other]
-
-@snap[north-west]
-### Other
-@snapend
-
-@snap[west span-100]
-Docker Store (beta, commercial)<br/>
-Docker Cloud (service, depends on providers)<br/>
-vs. Docker Datacenter with DTR & UCP (enterprise)<br/>
-@snapend
-
-+++
-@title[How it fits together]
-
-@snap[north-west]
-### How it fits together
-@snapend
-![architecture](template/img/architecture.png)
