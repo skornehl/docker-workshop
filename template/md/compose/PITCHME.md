@@ -70,12 +70,14 @@ __Single host deployments:__
 ### [@fa[info]](https://docs.docker.com/compose/overview/#features)
 @snapend
 
+@snap[east]
 __Multiple isolated environments on a single host__
 A project name can used to isolate environments, e.g.:
 
 **Dev host**: multiple copies of single env (= feature branch names)
 **CI server**: do not allow builds to interfer (= unique build number)
 **Shared host**: prevent different projects which may use same service names from interfering with each other
+@snapend
 
 +++
 @title[Features]
