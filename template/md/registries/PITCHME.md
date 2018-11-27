@@ -111,8 +111,12 @@
 @ulend
 @snapend
 
-+++?code=template/md/registries/start-local-registry.sh?lang=sh&title=Answer
++++?code=template/md/registries/start-local-registry.sh?lang=sh
 @title[Answer]
+@snap[north-west]
+### Exercise
+#### Answer
+@snapend
 
 @[1-2]
 @[4-5]
