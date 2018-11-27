@@ -9,7 +9,7 @@
 +++
 @title[Best Practices]
 @snap[north-west]
-### Best Practices 1/n
+### Best Practices
 @snapend
 @snap[north-east]
 ### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices)
@@ -20,7 +20,7 @@ Containers should be ephemeral
 +++
 @title[Best Practices]
 @snap[north-west]
-### Best Practices 2/n
+### Best Practices
 @snapend
 Run only one process per container
 
@@ -28,7 +28,7 @@ Run only one process per container
 +++
 @title[Best Practices]
 @snap[north-west]
-### Best Practices 3/n
+### Best Practices
 @snapend
 Avoid installing unnecessary packages
 
@@ -42,7 +42,7 @@ Minimize the number of layers
 +++
 @title[Best Practices]
 @snap[north-west]
-### Best Practices 4/n
+### Best Practices
 @snapend
 Group common operations
 
@@ -54,7 +54,7 @@ Use tags
 +++
 @title[Best Practices]
 @snap[north-west]
-### Best Practices 5/n
+### Best Practices
 @snapend
 Sort mult-line arguments and indent 4 spaces
 ```
@@ -69,48 +69,70 @@ RUN apt-get update && apt-get install --yes \
 +++
 @title[Best Practices]
 @snap[north-west]
-### Best Practices 6/n
+### Best Practices
+#### Build Cache
 @snapend
-Build Cache
-- CACHING: Use whenever possible. Saves time.
-- DISABLE: ```docker build --no-cache=true -t NAME:TAG .```
-- CHECKSUMS: For ADD and COPY the contents of the file(s) in the image are examined and a checksum is calculated for each file.
-- NO CACHE LOOKUP: All other commands are not evaluted on a file level to determine a cache match/hit.
+CACHING: Use whenever possible. Saves time.
+
+DISABLE: ```docker build --no-cache=true -t NAME:TAG .```
 
 
 +++
-
-@title[Guidelines]
-
+@title[Best Practices]
 @snap[north-west]
 ### Best Practices
+#### Build Cache
 @snapend
-`FROM`: use current official Repositories,
-    e.g. Debian is tightly controlled and kept minimal: 150 mb.
+CHECKSUMS: For ADD and COPY the contents of the file(s) in the image are examined and a checksum is calculated for each file.
 
-`RUN`: split long or complex RUN statements on multiple lines separated
-    ```
-    RUN command-1 \
-        command-2 \
-        command-3
-    ```
+NO CACHE LOOKUP: All other commands are not evaluted on a file level to determine a cache match/hit.
 
-**Avoid** `RUN apt-get upgrade` or `dist-upgrade`
+
 +++
-
 @title[Guidelines]
-
 @snap[north-west]
 ### Best Practices
 @snapend
+`FROM`
 
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
+use current official Repositories,
+e.g. Debian is tightly controlled and kept minimal: 150 mb.
+
+
+
++++
+@title[Guidelines]
+@snap[north-west]
+### Best Practices
 @snapend
-<br/>
-- **RUN** apt-get update
-  - **CACHE BUSTING**: Always combine RUN apt-get update && apt-get install -y 
-- **VERSION PINNING** forces the build to retrieve a particular version
+`RUN`
+
+split long or complex RUN statements on multiple lines
+```
+RUN command-part-1 \
+    command-part-2 \
+    command-part-3
+```
+
+**Avoid** `apt-get upgrade` or `apt-get dist-upgrade`
+
+
++++
+@title[Guidelines]
+@snap[north-west]
+### Best Practices
+@snapend
+CACHE BUSTING: Always combine `RUN apt-get update && apt-get install -y ...`
+
+VERSION PINNING: forces the build to retrieve a particular version
+
+
+
++++
+@title[Guidelines]
+@snap[north-west]
+### Best Practices
+@snapend
 - **CMD**
     - alway use this format:
     ```CMD ["executable", "param1", "param2"…]```
