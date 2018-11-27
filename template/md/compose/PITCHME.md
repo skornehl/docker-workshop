@@ -141,6 +141,22 @@ Inheritance is support by using the extends field or by creating multiple Compos
 @snapend
 
 +++
+@title[Troubleshooting]
+
+@snap[north-west]
+### Troubleshooting
+@snapend
+
+Parameter | Description
+------------ | -------------
+events | Receive real time events from containers
+exec | Execute a command in a running container
+logs | View output from containers
+top | Display the running processes
+
+@snapend
+
++++
 @title[Exercise]
 
 @snap[north-west]
