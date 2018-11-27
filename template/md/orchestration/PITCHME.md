@@ -1,9 +1,9 @@
 ---?image=template/img/orchestration.jpeg
 
-@title[Docker orchestration]
+@title[Docker Orchestration]
 
 @snap[north text-white span-100]
-@fa[terminal fa-2x](Docker orchestration)
+@fa[terminal fa-2x](Docker Orchestration)
 @snapend
 
 +++
@@ -51,3 +51,28 @@
 - GKE
 @ulend
 @snapend
+
++++
+@title[Exercise]
+
+@snap[north-west]
+### Exercise
+@snapend
+
+@snap[west span-100]
+@ol[](false)
+- Go to www.play-with-docker.com
+- Add 3 nodes
+- Run ```docker swarm init``` on first node
+- Run ```docker swarm join --token <TOKEN> <IP>``` on all other 
+- Have a look woth ```docker node ls```
+@olend
+@snapend
+
++++?code=template/md/network/example.sh?lang=sh&title=Answer
+@title[Answer]
+
+@[1-3]
+@[5-6]
+@[8-13]
+@[15-19]
