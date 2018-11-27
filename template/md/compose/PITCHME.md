@@ -39,9 +39,11 @@
 
 @snap[west]
 __Development environments:__<br/>
+@ul[](false)
 - running web apps in an isolated environment is crucial
 - the Compose file allows to document service dependencies
 - multi-page “developer getting started guides” can be avoided
+@ulend
 @snapend
 
 +++
@@ -57,10 +59,13 @@ __Development environments:__<br/>
 
 @snap[west]
 __Automated testing environments:__<br/>
+@ul[](false)
 - create & destroy isolated testing environments easily
- <br/>
+@ulend
 __Single host deployments:__<br/>
+@ul[](false)
 - deploy to a remote Docker Engine or Swarm cluster
+@ulend
 @snapend
 
 +++
