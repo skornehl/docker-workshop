@@ -12,6 +12,9 @@
 @snap[north-west]
 ### Container Security
 @snapend
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/security/security/#kernel-namespaces)
+@snapend
 
 @snap[west span-100]
 Container security is Linux kernel security
@@ -48,10 +51,28 @@ Container security is Linux kernel security
 ### Network Security
 @snapend
 
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/network/overlay/#encrypt-traffic-on-an-overlay-network)
+@snapend
+
 @snap[west span-100]
 @ul[](false)
 - Seperate Docker networks
 - In Swarm/K8s: Overlay networks
-- WeaveNet: Encryption
+- WeaveNet/Overlay: Encryption
 @ulend
 @snapend
+
++++
+@title[Network Security]
+
+@snap[north-west]
+### Network Security
+@snapend
+
+```
+docker network create \
+    --opt encrypted \
+    --driver overlay \
+    --attachable my-attachable-multi-host-network
+```
