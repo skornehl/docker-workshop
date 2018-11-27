@@ -46,10 +46,10 @@ stop | Stop container
 rm   | Remove container
 
 +++
-@title[CLI reference - RUN]
+@title[CLI reference - RUN 1/2]
 
 @snap[north-west]
-### CLI reference - RUN
+### CLI reference - RUN 1/2
 @snapend
 
 @snap[north-east]
@@ -64,9 +64,31 @@ Parameter | Description
 --name | unique Name for container
 -d | Detach container
 -it | Interactive terminal with pseudo-TTY
+--rm | Remove container after run
+
+
+
++++
+@title[CLI reference - RUN 2/2]
+
+@snap[north-west]
+### CLI reference - RUN 2/2
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/reference/commandline/run/) <br/>
+@box[bg-gray rounded](docker run [OPTIONS] IMAGE[:Tag] [COMMAND])
+@snapend
+<br/>
+<br/>
+
+Parameter | Description
+------------ | -------------
 -p | Expose a port (Host:Container)
 -v | Mount a volume (Host:Container)
---rm | Remove container after run
+
+
+
 
 +++
 @title[CLI reference - EXEC]
