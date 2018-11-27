@@ -1,4 +1,4 @@
----?image=template/img/docker-jenkins.png&size=50% 100%&color=white
+---?image=template/img/docker-jenkins.png&size=auto 75%&position=bottom
 
 @title[CI/CD with Docker]
 
