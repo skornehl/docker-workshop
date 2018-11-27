@@ -114,7 +114,7 @@ RUN command-part-1 \
     command-part-3
 ```
 
-**Avoid** `apt-get upgrade` or `apt-get dist-upgrade`
+_Avoid apt-get upgrade or apt-get dist-upgrade._
 
 
 +++
@@ -122,7 +122,7 @@ RUN command-part-1 \
 @snap[north-west]
 ### Best Practices
 @snapend
-CACHE BUSTING: Always combine `RUN apt-get update && apt-get install -y ...`
+CACHE BUSTING: Always combine </br>`RUN apt-get update && apt-get install -y …`
 
 VERSION PINNING: forces the build to retrieve a particular version
 
@@ -133,83 +133,80 @@ VERSION PINNING: forces the build to retrieve a particular version
 @snap[north-west]
 ### Best Practices
 @snapend
-- **CMD**
-    - alway use this format:
-    ```CMD ["executable", "param1", "param2"…]```
-    - with ENTRYPOINT is a kind of default parameter
+
+`CMD`
+
+alway use this format:</br>
+```CMD ["executable", "param1", "param2", …]```
+
+_with ENTRYPOINT as a kind of default parameter_
+
+
 +++
-
 @title[Guidelines]
-
 @snap[north-west]
 ### Best Practices
 @snapend
 
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
-@snapend
-- **EXPOSE**: 
-    - use the common, traditional port for your application
-    - For container linking, Docker provides environment variables (ie, MYSQL_PORT_3306_TCP)
+`EXPOSE`
+
+use the common, traditional port for your application
+
+For container linking, Docker provides environment variables (eg MYSQL_PORT_3306_TCP)
+
+
 +++
-
 @title[Guidelines]
-
 @snap[north-west]
 ### Best Practices
 @snapend
+`ENV`
 
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
-@snapend
-- **ENV**
-    - Update path to ensure commands work:
+- Update path to ensure commands work:
     ```
     ENV PATH /usr/local/nginx/bin:$PATH
     ```
-    - Provide needed env vars for services eg. Postgres PGDATA
-    - Use for version numbers and pathes (like constant vars)
+- Provide needed env vars for services eg. Postgres PGDATA
+- Use for version numbers and pathes (like constant vars)
+
+
+
 +++
-
 @title[Guidelines]
-
 @snap[north-west]
 ### Best Practices
 @snapend
+`COPY`
 
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
-@snapend
-- **COPY**
-    - Beware of using ADD instead of COPY
-    - COPY only supports the basic copying of local files
-    - FEWER CACHE INVALIDATIONS: Reuse multiple COPY steps individually.
-    ```
+Beware of using ADD instead of COPY
+
+COPY only supports the basic copying of local files
+
+FEWER CACHE INVALIDATIONS: Reuse multiple COPY steps individually.
+
+```
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 COPY . /tmp/
-    ```
+```
+
 
 +++
-
 @title[Guidelines]
-
 @snap[north-west]
 ### Best Practices
 @snapend
+`ADD`
 
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#the-dockerfile-instructions) 
-@snapend
-- **ADD**
-    - TAR AUTO-EXTRACTION
-    - Because image size matters, using ADD to fetch packages from remote URLs is strongly discouraged
+TAR AUTO-EXTRACTION
+
+Because image size matters, using ADD to fetch packages from remote URLs is strongly discouraged
 +++
 
 @title[Clean Up]
 
 @snap[north-west]
-### Clean up command
+### Clean up commands
 @snapend
 
 ```
