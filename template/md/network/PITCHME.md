@@ -1,9 +1,9 @@
 ---?image=template/img/network.jpeg
 
-@title[Docker network]
+@title[Docker Network]
 
 @snap[north text-black span-100]
-@fa[terminal fa-2x](Docker network)
+@fa[terminal fa-2x](Docker Network)
 @snapend
 
 +++
