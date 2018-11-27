@@ -58,6 +58,39 @@ Parameter | Description
 -o | Options
 
 +++
+@title[Mount vs -v]
+
+@snap[north-west]
+### Mount vs -v
+@snapend
+@ul[](false)
+To bind mounts, all options for volumes are available for both --mount and -v flags.
+When using volumes with services, only --mount is supported.
+@ulend
+
++++
+@title[Mount vs -v]
+
+@snap[north-west]
+### Mount vs -v
+@snapend
+```
+# --mount
+docker run -d \
+  --name devtest \
+  --mount source=myvol2,target=/app \
+  nginx:latest
+
+# -v
+docker run -d \
+  --name devtest \
+  -v myvol2:/app \
+  nginx:latest
+```
+@[1-5]
+@[7-11]
+
++++
 @title[Example tmpfs]
 
 @snap[north-west]
