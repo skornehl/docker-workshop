@@ -9,6 +9,7 @@ Day 1
 @snapend
 
 ---?include=template/md/introduction/PITCHME.md
+---?include=template/md/motivation/PITCHME.md
 ---?include=template/md/architecture/PITCHME.md
 ---?include=template/md/cli/PITCHME.md
 ---?include=template/md/registries/PITCHME.md
