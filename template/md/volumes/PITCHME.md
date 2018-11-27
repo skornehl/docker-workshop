@@ -27,6 +27,7 @@
 @box[bg-gray rounded](docker volume [COMMAND])
 @snapend
 <br/>
+<br/>
 
 Parameter | Description
 ------------ | -------------
@@ -48,6 +49,7 @@ rm | Remove volume
 @box[bg-gray rounded](docker volume create [OPTIONS] [VOLUME])
 @snapend
 <br/>
+
 Parameter | Description
 ------------ | -------------
 -d | Driver (default: local)
