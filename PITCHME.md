@@ -1,4 +1,5 @@
 ---?image=template/img/begin.jpeg&title=Day1
+@title[Day 1]
 
 @snap[north text-white span-100]
 @fa[terminal fa-2x](Docker Workshop<br/> <br/> <br/> Day 1)
@@ -19,6 +20,7 @@ Day 1
 @snap[north text-white span-100]
 @fa[terminal fa-2x](Docker Workshop<br/> <br/> <br/>Day 2)
 @snapend
+@title[Day 2]
 
 <!---
 Day 2
