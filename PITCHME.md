@@ -1,7 +1,7 @@
 ---?image=template/img/begin.jpeg
 
 @snap[north text-white span-100]
-@fa[terminal fa-2x](Docker Workshop<br> Day 1)
+@fa[terminal fa-2x](Docker Workshop<br/> <br/> <br/> Day 1)
 @snapend
 
 <!---
@@ -18,7 +18,7 @@ Day 1
 ---?image=template/img/begin.jpeg
 
 @snap[north text-white span-100]
-@fa[terminal fa-2x](Docker Workshop<br> Day 2)
+@fa[terminal fa-2x](Docker Workshop<br/> <br/> <br/>Day 2)
 @snapend
 
 <!---
