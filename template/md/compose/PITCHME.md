@@ -42,7 +42,7 @@ __Development environments:__<br/>
 @ul[](false)
 - running web apps in an isolated environment is crucial
 - the Compose file allows to document service dependencies
-- multi-page “developer getting started guides” can be avoided
+- multi-page "developer getting started guides" can be avoided
 @ulend
 @snapend
 
