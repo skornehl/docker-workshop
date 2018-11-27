@@ -11,11 +11,11 @@ Day 1
 ---?include=template/md/architecture/PITCHME.md
 ---?include=template/md/cli/PITCHME.md
 ---?include=template/md/registries/PITCHME.md
----?include=template/md/compose/PITCHME.md
+---?include=template/md/volumes/PITCHME.md
+---?include=template/md/network/PITCHME.md
 ---?include=template/md/best-practice/PITCHME.md
-
 
 <!---
 Day 2
 -->
----?include=template/md/network/PITCHME.md
+---?include=template/md/compose/PITCHME.md
