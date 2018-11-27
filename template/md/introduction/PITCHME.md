@@ -10,6 +10,8 @@ __Operations Engineer__ <br/><br/>
 @fa[arrow-right] Docker <br/>
 @fa[arrow-right] Kubernetes <br/>
 @fa[arrow-right] Ansible <br/>
+@fa[arrow-right] CI/CD <br/>
+@fa[arrow-right] AWS <br/>
 @snapend
 
 @snap[east sidebar]
@@ -45,8 +47,10 @@ AWS @fa[arrow-left] <br/>
 @snapend
 
 @snap[west span-100]
-Gaining good understanding of Docker Ecosystem </br>
-Beeing prepared to start developing with Docker </br>
+Gaining good understanding of Docker Ecosystem </br> </br>
+
+Beeing prepared to start developing with Docker </br> </br>
+
 Use as much as possible ship and container pictures
 @snapend
 
@@ -66,11 +70,13 @@ Use as much as possible ship and container pictures
 @snapend
 
 @snap[west span-100]
-Containers are a standard format<br/>
-Easily portable across environment<br/>
-Packages up software binaries and dependencies<br/>
-Isolates software from each other<br/>
-Ecosystem has developed around containers<br/>
+@ul[](false)
+- Containers are a standard format<br/>
+- Easily portable across environment<br/>
+- Packages up software binaries and dependencies<br/>
+- Isolates software from each other<br/>
+- Ecosystem has developed around containers<br/>
+@ulend
 @snapend
 
 +++
