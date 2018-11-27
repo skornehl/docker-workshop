@@ -104,11 +104,11 @@
 @snapend
 
 @snap[west span-100]
-@ul[](false)
+@ol[](false)
 - Start a local registry 
   (Hint: docker pull registry:2 - it runs on port 5000)
 - Push and pull an image into it
-@ulend
+@olend
 @snapend
 
 +++?code=template/md/registries/start-local-registry.sh?lang=sh

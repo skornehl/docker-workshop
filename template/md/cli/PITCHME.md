@@ -117,12 +117,12 @@ Parameter | Description
 @snapend
 
 @snap[west span-100]
-@ul[](false)
+@ol[](false)
 - Pull nginx:latest container from dockerhub
 - Run a nginx container with name 'web1' and exposed port 8080
 - Try to access it from Host machine with curl
 - Log into container and list directories
-@ulend
+@olend
 @snapend
 
 +++?code=template/md/cli/first-container.sh?lang=sh
@@ -165,12 +165,12 @@ stats | Display container resource usage statistics
 @snapend
 
 @snap[west span-100]
-@ul[](false)
+@ol[](false)
 - Run a nginx container with name 'web1' and exposed port 8080
 - Try to access it from Host machine with curl and follow access logs
 - Find out IP of the running container
 - Monitor memory consumption of web1
-@ulend
+@olend
 @snapend
 
 +++?code=template/md/cli/monitoring.sh?lang=sh
@@ -235,11 +235,11 @@ Parameter | Description
 @snapend
 
 @snap[west span-100]
-@ul[](false)
+@ol[](false)
 - Build a Dockerfile which replaces /usr/share/nginx/html/index.html
 - Start and access it
 - Optionally: Make dockerhub Account and push it!
-@ulend
+@olend
 @snapend
 
 +++?code=template/md/cli/index.html?title=index.html
