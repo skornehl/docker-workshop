@@ -6,11 +6,13 @@
 @fa[terminal fa-2x](Typical Local Workflow with CLI)
 @snapend
 
+
+
 +++
-@title[CLI reference]
+@title[CLI reference - images]
 
 @snap[north-west]
-### CLI reference 
+### CLI reference - images
 @snapend
 
 @snap[north-east]
@@ -18,13 +20,30 @@
 @snapend
 
 Parameter | Description
------------- | -------------
+--------- | -------------
 pull | Pulls image from registry
 push | Pushes image to registry
-run | Start container
+rmi  | Remove image
+
+
+
++++
+@title[CLI reference - containers]
+
+@snap[north-west]
+### CLI reference - containers
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/reference/commandline/cli/) 
+@snapend
+
+Parameter | Description
+--------- | -------------
+run  | Start container
+exec | Execute within running container
 stop | Stop container
-rm | Remove container
-rmi | Remove image
+rm   | Remove container
 
 +++
 @title[CLI reference - RUN]
@@ -46,6 +65,7 @@ Parameter | Description
 -d | Detach container
 -it | Interactive terminal with pseudo-TTY
 -p | Expose a port (Host:Container)
+-v | Mount a volume (Host:Container)
 --rm | Remove container after run
 
 +++
@@ -217,8 +237,7 @@ Parameter | Description
 @snapend
 ![layer](template/img/layers.png)
 
-+++?code=template/md/cli/Dockerfile-multistage?title=Dockerfile-multistage
-@title[Dockerfilem-ultistage]
++++?code=template/md/cli/Dockerfile-multistage?title=Dockerfile_multistage
 @[1-5]
 @[7-11]
 
