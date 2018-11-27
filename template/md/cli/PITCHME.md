@@ -250,7 +250,7 @@ Parameter | Description
 #### Dockerfile
 @snapend
 
-+++?code=template/md/cli/dockerfile.sh?lang=sh&title=Answer
++++?code=template/md/cli/dockerfile.sh?lang=sh
 @title[Answer]
 @snap[north-west]
 ### Exercise
@@ -270,14 +270,14 @@ Parameter | Description
 @snapend
 ![layer](template/img/layers.png)
 
-+++?code=template/md/cli/Dockerfile-multistage?title=Dockerfile_multistage
++++?code=template/md/cli/Dockerfile-multistage
 @snap[north-west]
 ### Dockerfile, multistage
 @snapend
 @[1-5]
 @[7-11]
 
-+++?code=template/md/cli/busybox-static?lang=sh&title=From_scratch
++++?code=template/md/cli/busybox-static?lang=sh
 @snap[north-west]
 ### FROM scratch
 @snapend
