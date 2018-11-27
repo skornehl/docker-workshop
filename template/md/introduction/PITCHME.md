@@ -6,7 +6,7 @@
 
 @snap[west sidebar]
 #### Armin Halim-Schneider
-Operations Engineer <br/><br/>
+__Operations Engineer__ <br/><br/>
 @fa[arrow-right] Docker <br/>
 @fa[arrow-right] Kubernetes <br/>
 @fa[arrow-right] Ansible <br/>
@@ -14,11 +14,12 @@ Operations Engineer <br/><br/>
 
 @snap[east sidebar]
 #### Sebastian Kornehl
-Operations Engineer <br/><br/>
+__Operations Engineer__ <br/><br/>
 Docker @fa[arrow-left] <br/>
 Kubernetes @fa[arrow-left] <br/>
 Ansible @fa[arrow-left] <br/>
-
+CI/CD @fa[arrow-left] <br/>
+AWS @fa[arrow-left] <br/>
 @snapend
 
 +++
