@@ -165,15 +165,15 @@ Inheritance is support by using the extends field or by creating multiple Compos
 version: '3.3'
 
 services:
-   <service-1>:
+   <db>:
      image: <image>
      restart: <restart policy>
      environment:
        <List of env variable>
 
-   <service-1>:
+   <service>:
      depends_on:
-       - <service-1>
+       - <db>
      image: <image>
      ports:
        - <ports to be exposed>
