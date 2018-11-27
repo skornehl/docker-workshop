@@ -135,10 +135,10 @@ Parameter | Description
 @[14-16]
 
 +++
-@title[CLI reference]
+@title[CLI reference - CONTROLS]
 
 @snap[north-west]
-### CLI reference 
+### CLI reference - CONTROLS
 @snapend
 
 @snap[north-east]
@@ -238,9 +238,15 @@ Parameter | Description
 
 +++?code=template/md/cli/index.html?title=index.html
 @title[index.html]
+@snap[north-west]
+### index.html
+@snapend
 
 +++?code=template/md/cli/Dockerfile?title=Dockerfile
 @title[Dockerfile]
+@snap[north-west]
+### Dockerfile
+@snapend
 
 +++?code=template/md/cli/dockerfile.sh?lang=sh&title=Answer
 @title[Answer]
