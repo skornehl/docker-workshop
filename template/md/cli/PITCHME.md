@@ -217,24 +217,6 @@ Parameter | Description
 @snapend
 ![layer](template/img/layers.png)
 
-+++
-@title[Best practice]
-
-@snap[north-west]
-### Best practice
-@snapend
-
-@snap[west span-100]
-@ul[](false)
-- Keep it small
-- Only one runtime per container
-- Use pipes, group common operations
-- Order of the statements matters
-- Use .dockerignore if needed
-- Use environment variable
-@ulend
-@snapend
-
 +++?code=template/md/cli/Dockerfile-multistage?title=Dockerfile-multistage
 @title[Dockerfilem-ultistage]
 @[1-5]
