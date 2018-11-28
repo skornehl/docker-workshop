@@ -1,11 +1,29 @@
+---?image=template/img/compose.jpeg
 @title[Motivation]
 
-@snap[north-west]
-### Motivation
+@snap[north text-white span-100]
+@fa[terminal fa-2x](Motivation)
 @snapend
-![docker_apps_changing](template/img/docker_apps_changing.jpg)
 
 +++
+
+@title[Pain Points]
+
+@snap[north-west]
+### Pain Points
+@snapend
+
+@snap[west span-100]
+@ul[](false)
+- Runtime environments are difficult to reproduce
+- Software runtime dependencies
+- Build tools are difficult to install
+- Or require specific OS
+@ulend
+@snapend
+
++++
+
 @title[Why Containers?]
 
 @snap[north-west]
@@ -21,14 +39,6 @@
 - Ecosystem has developed around containers<br/>
 @ulend
 @snapend
-
-+++
-@title[What is a Container?]
-
-@snap[north-west]
-### What is a Container?
-@snapend
-![systems_comparison](template/img/systems_comparison.jpg)
 
 +++
 @title[Why should devs care? #1]
