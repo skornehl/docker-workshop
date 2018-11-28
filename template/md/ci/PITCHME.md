@@ -33,6 +33,7 @@
 @snap[west span-100]
 @ol[](false)
 - Start jenkins in docker
+
 - Connect to it using your browser
 - Add a freestyle job _hello_ with a shell command
 ```
@@ -40,6 +41,21 @@ echo hello world!
 ```
 - Build it
 - Look at the console output
+@olend
+@snapend
+
++++
+@title[Hints]
+
+@snap[north-west]
+### Hints
+@snapend
+
+@snap[west span-100]
+@ol[](false)
+- Docker image: _jenkins/jenkins:alpine_
+- Default port: _8080_
+- Shell command: _echo hello world!_
 @olend
 @snapend
 
