@@ -64,4 +64,21 @@ Day 2
 ---?include=template/md/orchestration/PITCHME.md
 
 +++
+
+@title[Goal]
+
+@snap[north-west]
+### Goal of this workshop
+@snapend
+
+@snap[west span-100]
+Gaining a good understanding of Docker ecosystem <br/> <br/>
+
+Being prepared to start developing with Docker <br/> <br/>
+
+Get an idea of how to use Docker for automated testing
+@ulend
+@snapend
+
++++
 Thank you for your attention!
