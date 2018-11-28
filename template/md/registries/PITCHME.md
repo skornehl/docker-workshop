@@ -15,8 +15,8 @@
 
 @snap[west span-100]
 @ul[](false)
-- Dockerhub
-- Quay (CoreOS/Red Hat)
+- Docker Hub
+- Quay (CoreOS -> Red Hat -> IBM)
 - ECR (AWS)
 - ACR (Azure)
 - gcr  (Google)
@@ -25,10 +25,10 @@
 @snapend
 
 +++
-@title[Dockerhub]
+@title[Docker Hub]
 
 @snap[north-west]
-### Dockerhub
+### Docker Hub
 @snapend
 
 @snap[north-east]
@@ -39,7 +39,7 @@
 @ul[](false)
 - Default registry
 - Free for public Repos
-- Subscrition for Private Repos
+- Subscription for private Repos
 @ulend
 @snapend
 
@@ -58,7 +58,8 @@
 @ul[](false)
 - Free for public Repos
 - Subscrition for Private Repos
-- pull with `docker pull quay.io/coreos/hyperkube`
+- pull with 
+    ```docker pull quay.io/coreos/hyperkube```
 @ulend
 @snapend
 

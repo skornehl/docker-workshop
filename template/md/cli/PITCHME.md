@@ -236,9 +236,9 @@ Parameter | Description
 
 @snap[west span-100]
 @ol[](false)
-- Build a Dockerfile which replaces /usr/share/nginx/html/index.html
+- Build a Dockerfile which replaces /usr/share/nginx/html/index.html in nginx container
 - Start and access it
-- Optionally: Make dockerhub Account and push it!
+- Optionally: Make Docker Hub account and push it!
 @olend
 @snapend
 
