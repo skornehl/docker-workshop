@@ -62,18 +62,15 @@
 
 @snap[north-east]
 ### [@fa[info]](https://docs.docker.com/engine/swarm/#feature-highlights) 
-@box[bg-gray rounded](docker service COMMAND)
 @snapend
 
 @snap[east]
-@ul(false)
-- Cluster management integrated with Docker Engine
-- Decentralized design
-- Scaling
-- Multi-host networking
-- Service discovery
-- Load balancing
-@ulend
+Cluster management integrated with Docker Engine
+Decentralized design
+Scaling
+Multi-host networking
+Service discovery
+Load balancing
 @snapend
 
 +++
