@@ -148,8 +148,8 @@ RUN apk --no-cache add docker && rm -rf /var/cache/apk/*
 @snapend
 
 @[1]
-@[3]
-@[5-6]
+@[3](Preinstalling plugin)
+@[5-6](Installing Docker Engine)
 
 +++?code=template/md/ci/run-custom-jenkins.sh&language=sh&title=run-custom-jenkins.sh
 
