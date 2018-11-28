@@ -16,9 +16,10 @@
 @snap[west span-100]
 @ul[](false)
 - CI/CD Server
-- Java/Web based
+- Java based with Web UI
 - De facto standard
-- Job as DSL
+- Job as code via Job DSL
+- CI/CD pipeline as code via Pipeline DSL
 - Many plugins
 @ulend
 @snapend
@@ -32,7 +33,7 @@
 
 @snap[west span-100]
 @ol[](false)
-- Start jenkins in docker
+- Start Jenkins in Docker
 - Connect to it using your browser
 - Add a freestyle job _hello_ with a shell command
 ```
@@ -41,6 +42,21 @@ echo hello world!
 - Build it
 - Look at the console output
 @olend
+@snapend
+
++++
+@title[Hints]
+
+@snap[north-west]
+### Hints
+@snapend
+
+@snap[west span-100]
+@ul[](false)
+- Image: _jenkins/jenkins:alpine_
+- Port: _8080_
+- Command: _echo hello world!_
+@ulend
 @snapend
 
 +++?code=template/md/ci/run-jenkins.sh&language=sh&title=Answer
@@ -52,18 +68,34 @@ echo hello world!
 @[5]
 
 +++
-@title[Docker Pipeline]
+@title[CD Pipeline]
 
 @snap[north-west]
-### Using Docker with Jenkins Pipeline
+### CD Pipeline
+@snapend
+@snap[north-east]
+### [@fa[info]](https://jenkins.io/doc/pipeline/tour/hello-world/) <br/>
+@snapend
+
+@snap[west span-100]
+A continuous delivery pipeline is an automated expression of your process for getting software from version control right through to your users and customers.
+@snapend
+
++++
+@title[Jenkins Pipeline]
+
+@snap[north-west]
+### Jenkins Pipeline
 @snapend
 
 @snap[west span-100]
 @ul[](false)
-- Pipeline as code (_Jenkinsfile_)
+- Plugins suite
+- Pipeline definition in _Jenkinsfile_
+- Pipeline DSL
 - Built-in support for Docker
-- Use Docker images as the execution environment
-- Any tool can be packaged in a Docker container
+- Use Docker container as the execution environment
+- Any tool can be packaged in a Docker container 
 @ulend
 @snapend
 
@@ -76,12 +108,38 @@ echo hello world!
 
 @snap[west span-100]
 @ol[](false)
-- Start jenkins in docker using custom image
+- Build a custom image for Jenkins
+- Start Jenkins using the custom image
 - Connect to it using your browser
-- Add a pipeline job _test_ with a pipeline script
+- Install plugin: _workflow-aggregator_
+- Add a pipeline job _test_ with a pipeline definition
 - Build it
 - Look at the console output
 @olend
+@snapend
+
++++
+@title[Hints]
+
+@snap[north-west]
+### Hints
+@snapend
+
+@snap[west span-100]
+@ul[](false)
+- Base image: _jenkins/jenkins:alpine_
+- Install Docker:
+```
+USER root
+```
+<br/>
+```
+RUN apk --no-cache add docker && rm -rf /var/cache/apk/*
+```
+- Port: _8080_
+- Docker host socket: _/var/run/docker.sock_
+- Plugin: _workflow-aggregator_
+@ulend
 @snapend
 
 +++?code=template/md/ci/Dockerfile&language=dockerfile&title=Dockerfile
