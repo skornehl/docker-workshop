@@ -85,13 +85,14 @@ A continuous delivery pipeline is an automated expression of your process for ge
 @title[Jenkins Pipeline]
 
 @snap[north-west]
-### CI/CD pipeline with Jenkins Pipeline
+### Jenkins Pipeline
 @snapend
 
 @snap[west span-100]
 @ul[](false)
-- Pipeline plugins suite
+- Plugins suite
 - Pipeline definition in _Jenkinsfile_
+- Pipeline DSL
 - Built-in support for Docker
 - Use Docker container as the execution environment
 - Any tool can be packaged in a Docker container 
