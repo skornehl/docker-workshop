@@ -65,10 +65,15 @@
 @snapend
 
 Cluster management integrated with Docker Engine
+
 Decentralized design
+
 Scaling
+
 Multi-host networking
+
 Service discovery
+
 Load balancing
 
 +++
