@@ -352,7 +352,7 @@ kubectl get nodes
 @[1-2]
 @[4-6]
 @[8-9]
-@[10-11]
+@[11-12]
 
 +++
 @title[CLI reference - kubectl 1/2]
