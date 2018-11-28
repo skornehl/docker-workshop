@@ -95,8 +95,8 @@ echo hello world!
 @ol[](false)
 - Build a custom image for Jenkins
 - Start Jenkins using the custom image
-- Install plugin: _workflow-aggregator_
 - Connect to it using your browser
+- Install plugin: _workflow-aggregator_
 - Add a pipeline job _test_ with a pipeline definition
 - Build it
 - Look at the console output
