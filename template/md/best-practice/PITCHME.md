@@ -89,7 +89,7 @@ NO CACHE LOOKUP: All other commands are not evaluted on a file level to determin
 +++
 @title[Guidelines]
 @snap[north-west]
-### Best Practices - from directive
+### Best Practices - from
 @snapend
 use current official Repositories,
 e.g. Debian is tightly controlled and kept minimal: 150 mb.
@@ -99,7 +99,7 @@ e.g. Debian is tightly controlled and kept minimal: 150 mb.
 +++
 @title[Guidelines]
 @snap[north-west]
-### Best Practices - run directive
+### Best Practices - run
 @snapend
 split long or complex RUN statements on multiple lines
 ```
@@ -125,7 +125,7 @@ VERSION PINNING: forces the build to retrieve a particular version
 +++
 @title[Guidelines]
 @snap[north-west]
-### Best Practices - cmd directive
+### Best Practices - cmd
 @snapend
 alway use the list format:</br>
 `CMD ["executable", "param1", "param2", …]`
@@ -136,7 +136,7 @@ _with ENTRYPOINT as a kind of default parameter_
 +++
 @title[Guidelines]
 @snap[north-west]
-### Best Practices - expose directive
+### Best Practices - expose
 @snapend
 use the common, traditional port for your application
 
@@ -146,12 +146,10 @@ For container linking, Docker provides environment variables (eg MYSQL_PORT_3306
 +++
 @title[Guidelines]
 @snap[north-west]
-### Best Practices - env directive
+### Best Practices - env
 @snapend
-- Update path to ensure commands work:
-    ```
-ENV PATH /usr/local/nginx/bin:$PATH
-    ```
+- Update path to ensure commands work: </br>
+    ```ENV PATH /usr/local/nginx/bin:$PATH```
 - Provide needed env vars for services eg. Postgres PGDATA
 - Use for version numbers and pathes (like constant vars)
 
@@ -160,7 +158,7 @@ ENV PATH /usr/local/nginx/bin:$PATH
 +++
 @title[Guidelines]
 @snap[north-west]
-### Best Practices - copy directive
+### Best Practices - copy
 @snapend
 Beware of using ADD instead of COPY
 
@@ -168,7 +166,7 @@ COPY only supports the basic copying of local files
 
 FEWER CACHE INVALIDATIONS: Reuse multiple COPY steps individually.
 
-```
+```dockerfile
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 COPY . /tmp/
@@ -178,7 +176,7 @@ COPY . /tmp/
 +++
 @title[Guidelines]
 @snap[north-west]
-### Best Practices - add directive
+### Best Practices - add
 @snapend
 TAR AUTO-EXTRACTION
 
