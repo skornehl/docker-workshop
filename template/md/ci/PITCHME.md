@@ -68,6 +68,20 @@ echo hello world!
 @[5]
 
 +++
+@title[CD Pipeline]
+
+@snap[north-west]
+### CD Pipeline
+@snapend
+@snap[north-east]
+### [@fa[info]](https://jenkins.io/doc/pipeline/tour/hello-world/) <br/>
+@snapend
+
+@snap[west span-100]
+A continuous delivery pipeline is an automated expression of your process for getting software from version control right through to your users and customers.
+@snapend
+
++++
 @title[Jenkins Pipeline]
 
 @snap[north-west]
