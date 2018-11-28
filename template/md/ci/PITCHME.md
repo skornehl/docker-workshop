@@ -122,6 +122,7 @@ USER root
 RUN apk --no-cache add docker && rm -rf /var/cache/apk/*
 ```
 - Port: _8080_
+- Docker host socket: _/var/run/docker.sock_
 - Plugin: _workflow-aggregator_
 @ulend
 @snapend
