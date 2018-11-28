@@ -372,7 +372,7 @@ Parameter | Description
 get | List one or more resources
 describe | Display the detailed state
 logs | Print the logs for a container in a pod
-exec | Execute a command against a container
+exec | Execute a command 
 
 +++
 @title[CLI reference - kubectl 2/2]
@@ -392,7 +392,7 @@ Parameter | Description
 create | Create one or more resources 
 delete | Delete resources
 run | Run a specified image 
-patch | Update one or more fields of a resource
+patch | Update one or more fields
 
 +++
 @title[Exercise]
