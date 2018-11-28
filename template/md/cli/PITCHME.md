@@ -275,7 +275,7 @@ Parameter | Description
 @snapend
 ![layer](template/img/layers.png)
 
-+++?code=template/md/cli/Dockerfile-multistage
++++?code=template/md/cli/Dockerfile-multistage?lang=dockerfile
 @snap[north-west]
 ### Dockerfile, multistage
 @snapend
