@@ -308,7 +308,7 @@ Parameter | Description
 - Initialize master
 - Initialize network
 - Join the other as nodes
-- Have a look with `docker node ls`
+- Have a look with `kubectl get nodes`
 @olend
 @snapend
 
