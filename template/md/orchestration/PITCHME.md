@@ -64,14 +64,12 @@
 ### [@fa[info]](https://docs.docker.com/engine/swarm/#feature-highlights) 
 @snapend
 
-@snap[east]
 Cluster management integrated with Docker Engine
 Decentralized design
 Scaling
 Multi-host networking
 Service discovery
 Load balancing
-@snapend
 
 +++
 @title[CLI reference - swarm]
