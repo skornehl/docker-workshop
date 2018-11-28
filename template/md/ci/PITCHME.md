@@ -139,7 +139,6 @@ RUN apk --no-cache add docker && rm -rf /var/cache/apk/*
 +++?code=template/md/ci/run-custom-jenkins.sh&language=sh&title=run-custom-jenkins.sh
 
 @[4]
-@[5]
 
 +++?code=template/md/ci/Jenkinsfile&language=groovy&title=Jenkinsfile
 @snap[north-east]
