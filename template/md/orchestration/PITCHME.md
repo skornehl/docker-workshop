@@ -88,6 +88,7 @@ Load balancing
 @box[bg-gray rounded](docker run swarm [OPTIONS] COMMAND [arg...])
 @snapend
 <br/>
+
 Parameter | Description
 --------- | -------------
   init | Initialize a swarm
@@ -142,6 +143,7 @@ docker node ls
 @box[bg-gray rounded](docker service COMMAND)
 @snapend
 <br/>
+
 Parameter | Description
 --------- | -------------
 create | Create a new service
@@ -161,6 +163,7 @@ ls | List services
 @box[bg-gray rounded](docker service COMMAND)
 @snapend
 <br/>
+
 Parameter | Description
 --------- | -------------
 ps | List the tasks of one or more services
