@@ -1,5 +1,4 @@
 ---?image=template/img/architecture.jpeg
-
 @title[Docker Architecture]
 
 @snap[north text-black span-100]
@@ -7,26 +6,54 @@
 @snapend
 
 +++
-@title[What is a Container?]
+@title[Definition]
 
 @snap[north-west]
-### What is a Container?
+### Definition
+@snapend
+
+@snap[west span-100]
+Image: a file, comprised of multiple layers<br/><br/>
+
+Container: (a running software package, which is based on an image)?
+@snapend
++++
+
+@title[Compared to VM]
+
+@snap[north-west]
+### Compared to VM
 @snapend
 ![systems_comparison](template/img/systems_comparison.jpg)
 
 +++
-@title[Runtime]
+@title[Runtimes]
 
 @snap[north-west]
-### Components
+### Runtimes
 @snapend
 
 @snap[west span-100]
 @ul[](false)
-- Docker server/daemon (_dockerd_)
-- Docker client/CLI (_docker engine_)
-- Docker registries
-- Docker objects:</br> image, container, network, volume, service
+- Docker Engine (_Docker Inc._)
+- rkt (_CoreOS_)
+@ulend
+@snapend
+
++++
+@title[Docker Engine]
+
+@snap[north-west]
+### Docker Engine
+@snapend
+
+@snap[west span-100]
+@ul[](false)
+- Client-Server Application
+- REST API
+- Server CLI: _dockerd_
+- Client CLI: _docker_
+- Also manages _volume_ and _network_
 @ulend
 @snapend
 
@@ -42,29 +69,15 @@
 @title[Registries]
 
 @snap[north-west]
-### Registries
+### Docker Registry
 @snapend
 
 @snap[west span-100]
 @ul[](false)
-- Docker Hub (service, public/private)<br/>
-- Docker Registry (free, CLI only)<br/>
-- Docker Trusted Registry (enterprise)<br/>
-@ulend
-@snapend
-
-+++
-@title[Other]
-
-@snap[north-west]
-### Registries (Others)
-@snapend
-
-@snap[west span-100]
-@ul[](false)
-- Docker Store (beta, commercial)<br/>
-- Docker Cloud (service, depends on providers)<br/>
-- Docker Datacenter with DTR & UCP (enterprise)<br/>
+- Server application
+- Store and distribute images
+- With REST API
+- Example: Docker Hub
 @ulend
 @snapend
 
