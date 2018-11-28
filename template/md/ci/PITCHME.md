@@ -115,8 +115,7 @@ echo hello world!
 - Base image: _jenkins/jenkins:alpine_
 - Install Docker:
 ```
-USER root
-
+USER root <br/>
 RUN apk --no-cache add docker && rm -rf /var/cache/apk/*
 ```
 - Port: _8080_
