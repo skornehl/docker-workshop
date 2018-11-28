@@ -7,6 +7,14 @@
 @snapend
 
 +++
+@title[What is a Container?]
+
+@snap[north-west]
+### What is a Container?
+@snapend
+![systems_comparison](template/img/systems_comparison.jpg)
+
++++
 @title[Runtime]
 
 @snap[north-west]
