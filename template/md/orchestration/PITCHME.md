@@ -33,6 +33,7 @@
 - Giant Swarm
 - Deis
 - Rancher
+- Nomad
 @ulend
 @snapend
 
@@ -53,6 +54,26 @@
 @snapend
 
 +++
+@title[CLI reference - swarm]
+
+@snap[north-west]
+### CLI reference - swarm
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/swarm/reference/swarm/) 
+@box[bg-gray rounded](docker run swarm [OPTIONS] COMMAND [arg...])
+@snapend
+
+Parameter | Description
+--------- | -------------
+  init | Initialize a swarm
+  join | Join a swarm as a node and/or manager
+  leave | Leave the swarm
+  update | Update the swarm
+
+
++++
 @title[Exercise]
 
 @snap[north-west]
@@ -68,6 +89,67 @@
 - Have a look woth ```docker node ls```
 @olend
 @snapend
+
++++
+@title[Docker Swarm]
+
+@snap[north-west]
+### Docker Swarm
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/swarm/#feature-highlights) 
+@box[bg-gray rounded](docker service COMMAND)
+@snapend
+
+@snap[east]
+@ul(false)
+- Cluster management integrated with Docker Engine
+- Decentralized design
+- Scaling
+- Multi-host networking
+- Service discovery
+- Load balancing
+@ulend
+@snapend
+
++++
+@title[CLI reference - service 1/2]
+
+@snap[north-west]
+### CLI reference - service 1/2
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/reference/commandline/service/) 
+@box[bg-gray rounded](docker service COMMAND)
+@snapend
+
+Parameter | Description
+--------- | -------------
+create | Create a new service
+inspect | Display detailed information on one or more services
+logs | Fetch the logs of a service or task
+ls | List services
+
++++
+@title[CLI reference - service 2/2]
+
+@snap[north-west]
+### CLI reference - service 2/2
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/reference/commandline/service/) 
+@box[bg-gray rounded](docker service COMMAND)
+@snapend
+
+Parameter | Description
+--------- | -------------
+ps | List the tasks of one or more services
+rollback | Revert changes to a service's configuration
+scale | Scale one or multiple replicated services
+update | Update a service
 
 +++
 @title[Exercise]
@@ -99,6 +181,36 @@ docker service ls
 
 # Scale
 docker service scale WORDPRESS_wordpress=3
+```
+
+@[1-2]
+@[4-5]
+@[7-8]
+@[10-11]
+
+
+@snap[north-west]
+### Exercise
+@snapend
+
+@snap[west span-100]
+@ol[](false)
+- Scale wordpress to 5
+- Monitor what happens
+- Look where the containers are
+- Remove a node
+- Monitor what happens
+@olend
+@snapend
+
++++
+@title[Answer]
+```sh
+# Scale
+docker service scale WORDPRESS_wordpress=3
+
+# Inspect
+docker service ps WORDPRESS_wordpress
 ```
 
 @[1-2]
