@@ -276,6 +276,9 @@ Parameter | Description
 ![layer](template/img/layers.png)
 
 +++
+@snap[north-west]
+### Dockerfile, multistage
+@snapend
 
 ```dockerfile
 FROM golang:1.7.3 as builder
@@ -288,8 +291,9 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 COPY --from=builder /go/src/github.com/alexellis/href-counter/app .
 CMD ["./app"]
-DOCKERFILE, MULTISTAGE
 ```
+@[1-5]
+@[7-11]
 
 +++?code=template/md/cli/Dockerfile-multistage?lang=dockerfile
 
