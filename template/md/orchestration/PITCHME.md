@@ -54,6 +54,29 @@
 @snapend
 
 +++
+@title[Docker Swarm]
+
+@snap[north-west]
+### Docker Swarm
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/engine/swarm/#feature-highlights) 
+@box[bg-gray rounded](docker service COMMAND)
+@snapend
+
+@snap[east]
+@ul(false)
+- Cluster management integrated with Docker Engine
+- Decentralized design
+- Scaling
+- Multi-host networking
+- Service discovery
+- Load balancing
+@ulend
+@snapend
+
++++
 @title[CLI reference - swarm]
 
 @snap[north-west]
@@ -64,7 +87,7 @@
 ### [@fa[info]](https://docs.docker.com/swarm/reference/swarm/) 
 @box[bg-gray rounded](docker run swarm [OPTIONS] COMMAND [arg...])
 @snapend
-
+<br/>
 Parameter | Description
 --------- | -------------
   init | Initialize a swarm
@@ -91,27 +114,21 @@ Parameter | Description
 @snapend
 
 +++
-@title[Docker Swarm]
+@title[Answer]
+```sh
+# Deploy compose file
+docker swarm init --advertise-addr=[IP]
 
-@snap[north-west]
-### Docker Swarm
-@snapend
+# Join Nodes
+docker swarm join --token [TOKEN] [IP]:2377
 
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/swarm/#feature-highlights) 
-@box[bg-gray rounded](docker service COMMAND)
-@snapend
+# List Service
+docker node ls
+```
 
-@snap[east]
-@ul(false)
-- Cluster management integrated with Docker Engine
-- Decentralized design
-- Scaling
-- Multi-host networking
-- Service discovery
-- Load balancing
-@ulend
-@snapend
+@[1-2]
+@[4-5]
+@[7-8]
 
 +++
 @title[CLI reference - service 1/2]
@@ -124,7 +141,7 @@ Parameter | Description
 ### [@fa[info]](https://docs.docker.com/engine/reference/commandline/service/) 
 @box[bg-gray rounded](docker service COMMAND)
 @snapend
-
+<br/>
 Parameter | Description
 --------- | -------------
 create | Create a new service
@@ -143,7 +160,7 @@ ls | List services
 ### [@fa[info]](https://docs.docker.com/engine/reference/commandline/service/) 
 @box[bg-gray rounded](docker service COMMAND)
 @snapend
-
+<br/>
 Parameter | Description
 --------- | -------------
 ps | List the tasks of one or more services
