@@ -195,6 +195,7 @@ update | Update a service
 @title[Answer]
 @snap[north-west]
 ### Exercise (Answer)
+@snapend
 
 ```sh
 # Deploy compose file
