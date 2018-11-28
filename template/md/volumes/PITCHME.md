@@ -130,7 +130,7 @@ docker volume create --driver local \
 ### Example nfs 
 @snapend
 
-```
+```bash
 # Create nfs
 docker volume create --driver local \
     --opt type=nfs \

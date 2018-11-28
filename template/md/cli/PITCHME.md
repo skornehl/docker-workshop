@@ -296,14 +296,6 @@ CMD ["./app"]
 @[1-5]
 @[7-11]
 
-+++?code=template/md/cli/Dockerfile-multistage?lang=dockerfile
-
-@snap[north-west]
-### Dockerfile, multistage
-@snapend
-@[1-5]
-@[7-11]
-
 +++?code=template/md/cli/busybox-static?lang=sh
 @snap[north-west]
 ### FROM scratch
