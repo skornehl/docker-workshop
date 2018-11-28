@@ -274,6 +274,22 @@ Service discovery
 Load balancing
 
 +++
+@title[Kubernetes - POD]
+
+@snap[north-west]
+### Kubernetes - POD
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://kubernetes.io) 
+@snapend
+Smallest unit in K8s
+
+Can be single or multi container
+
+Share network and storage
+
++++
 @title[CLI reference - kubeadm]
 
 @snap[north-west]
@@ -339,10 +355,10 @@ kubectl get nodes
 @[10-11]
 
 +++
-@title[CLI reference - kubectl]
+@title[CLI reference - kubectl 1/2]
 
 @snap[north-west]
-### CLI reference - kubectl
+### CLI reference - kubectl 1/2
 @snapend
 
 @snap[north-east]
@@ -356,7 +372,27 @@ Parameter | Description
 get | List one or more resources
 describe | Display the detailed state
 logs | Print the logs for a container in a pod
-create | Create one or more resources
+exec | Execute a command against a container
+
++++
+@title[CLI reference - kubectl 2/2]
+
+@snap[north-west]
+### CLI reference - kubectl 2/2
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://kubernetes.io/docs/reference/kubectl/overview/) 
+@box[bg-gray rounded](kubectl [command] [TYPE] [NAME] [flags])
+@snapend
+<br/>
+
+Parameter | Description
+--------- | -------------
+create | Create one or more resources 
+delete | Delete resources
+run | Run a specified image 
+patch | Update one or more fields of a resource
 
 +++
 @title[Exercise]
