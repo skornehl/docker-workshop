@@ -15,7 +15,7 @@
 @snap[west span-100]
 Image: a file, comprised of multiple layers<br/><br/>
 
-Container: (a running software package, which is based on an image)?
+Container: A running image + volume + network based on Linux namespaces
 @snapend
 +++
 
