@@ -1,27 +1,15 @@
 @title[Introduction]
 
-@snap[north-west]
+@snap[center]
 ### Introduction
 @snapend
 
-@snap[west sidebar]
-#### Armin Halim-Schneider
-__Operations Engineer__ <br/><br/>
-@fa[arrow-right] Docker <br/>
-@fa[arrow-right] Kubernetes <br/>
-@fa[arrow-right] Ansible <br/>
-@fa[arrow-right] CI/CD <br/>
-@fa[arrow-right] AWS <br/>
+@snap[south-west sidebar]
+Armin Halim-Schneider
 @snapend
 
-@snap[east sidebar]
-#### Sebastian Kornehl
-__Operations Engineer__ <br/><br/>
-Docker @fa[arrow-left] <br/>
-Kubernetes @fa[arrow-left] <br/>
-Ansible @fa[arrow-left] <br/>
-CI/CD @fa[arrow-left] <br/>
-AWS @fa[arrow-left] <br/>
+@snap[south-east sidebar]
+Sebastian Kornehl
 @snapend
 
 +++
