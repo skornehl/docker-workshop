@@ -74,10 +74,10 @@ Parameter | Description
 @snap[north-west]
 ### Mount vs -v
 @snapend
-```
+```bash
 # --mount
 docker run -d \
-  --name devtest 
+  --name devtest \
   --mount source=myvol2,target=/app \
   nginx:latest
 
