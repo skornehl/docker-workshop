@@ -16,6 +16,9 @@ Day 1
 ---?include=template/md/network/PITCHME.md
 ---?include=template/md/best-practice/PITCHME.md
 
++++
+
+Thank you for your attention!
 
 ---?image=template/img/begin.jpeg
 <!---
@@ -59,3 +62,6 @@ Day 2
 ---?include=template/md/machine/PITCHME.md
 ---?include=template/md/security/PITCHME.md
 ---?include=template/md/orchestration/PITCHME.md
+
++++
+Thank you for your attention!
