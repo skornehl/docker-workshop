@@ -338,10 +338,10 @@ kubectl get nodes
 @[8-9]
 
 +++
-@title[CLI reference - kubectl 1/2]
+@title[CLI reference - kubectl]
 
 @snap[north-west]
-### CLI reference - kubectl 1/2
+### CLI reference - kubectl
 @snapend
 
 @snap[north-east]
@@ -352,30 +352,10 @@ kubectl get nodes
 
 Parameter | Description
 --------- | -------------
-create | Create a new service
-inspect | Display detailed information on one or more services
-logs | Fetch the logs of a service or task
-ls | List services
-
-+++
-@title[CLI reference - kubectl 2/2]
-
-@snap[north-west]
-### CLI reference - kubectl 2/2
-@snapend
-
-@snap[north-east]
-### [@fa[info]](https://kubernetes.io/docs/reference/kubectl/overview/) 
-@box[bg-gray rounded](kubectl [command] [TYPE] [NAME] [flags])
-@snapend
-<br/>
-
-Parameter | Description
---------- | -------------
-ps | List the tasks of one or more services
-rollback | Revert changes to a service's configuration
-scale | Scale one or multiple replicated services
-update | Update a service
+get | List one or more resources
+describe | Display the detailed state
+logs | Print the logs for a container in a pod
+create | Create one or more resources
 
 +++
 @title[Exercise]
@@ -386,10 +366,7 @@ update | Update a service
 
 @snap[west span-100]
 @ol[](false)
-- Upload your docker-compose file with wordpress
-- Deploy it into your Swarm cluster
-- Find out where your containers are
-- Scale wordpress to 3
+- Run wordpress container
 @olend
 @snapend
 
@@ -400,55 +377,97 @@ update | Update a service
 @snapend
 
 ```sh
-# Deploy compose file
-docker deploy --compose-file=wordpress-compose.yml WORDPRESS
-
-# List local container
-docker ps
-
-# List Service
-docker service ls
-
-# Scale
-docker service scale WORDPRESS_wordpress=3
+# Deploy wordpress
+kubectl run wordpress --image=wordpress:latest --port=8000
 ```
 
-@[1-2]
-@[4-5]
-@[7-8]
-@[10-11]
-
 +++
-
+@title[Generate YAML]
 @snap[north-west]
-### Exercise
-@snapend
-
-@snap[west span-100]
-@ol[](false)
-- Scale wordpress to 5
-- Monitor what happens
-- Look where the containers are
-- Remove a node
-- Monitor what happens
-@olend
-@snapend
-
-+++
-@title[Answer]
-
-@snap[north-west]
-### Exercise (Answer)
+### Generate YAML
 @snapend
 
 ```sh
-# Scale
-docker service scale WORDPRESS_wordpress=3
-
-# Inspect
-docker service ps WORDPRESS_wordpress
+kubectl get deployment wordpress -o yaml | less
 ```
 
-@[1-2]
-@[4-5]
++++
+@title[Generate YAML]
+@snap[north-west]
+### Generate YAML
+@snapend
 
+```yaml
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: SOME_DATE
+  generation: 1
+  labels:
+    run: wordpress
+  name: wordpress
+  namespace: default
+  resourceVersion: "5333"
+  selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/wordpress
+  uid: 311691d6-f2ec-11e8-8c8b-024208017631
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      run: wordpress
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: wordpress
+    spec:
+      containers:
+      - image: wordpress:latest
+        imagePullPolicy: Always
+        name: wordpress
+        ports:
+        - containerPort: 8000
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  conditions:
+  - lastTransitionTime: SOME_DATE
+    lastUpdateTime: SOME_DATE
+    message: Deployment does not have minimum availability.
+    reason: MinimumReplicasUnavailable
+    status: "False"
+    type: Available
+  - lastTransitionTime: SOME_DATE
+    lastUpdateTime: SOME_DATE
+    message: ReplicaSet "wordpress-565d787b8f" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
+  observedGeneration: 1
+  replicas: 1
+  unavailableReplicas: 1
+  updatedReplicas: 1
+  ```
+@[1-2]
+@[3-14]
+@[15]
+@[17]
+@[22-26]
+@[32-39]
+@[48-65]
