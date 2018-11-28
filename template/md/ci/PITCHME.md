@@ -16,9 +16,10 @@
 @snap[west span-100]
 @ul[](false)
 - CI/CD Server
-- Java/Web based
+- Java based with Web UI
 - De facto standard
-- Job as DSL
+- Job as code via Job DSL
+- CI/CD pipeline as code via Pipeline DSL
 - Many plugins
 @ulend
 @snapend
@@ -32,8 +33,7 @@
 
 @snap[west span-100]
 @ol[](false)
-- Start jenkins in docker
-
+- Start Jenkins in Docker
 - Connect to it using your browser
 - Add a freestyle job _hello_ with a shell command
 ```
@@ -52,11 +52,11 @@ echo hello world!
 @snapend
 
 @snap[west span-100]
-@ol[](false)
-- Docker image: _jenkins/jenkins:alpine_
-- Default port: _8080_
-- Shell command: _echo hello world!_
-@olend
+@ul[](false)
+- Image: _jenkins/jenkins:alpine_
+- Port: _8080_
+- Command: _echo hello world!_
+@ulend
 @snapend
 
 +++?code=template/md/ci/run-jenkins.sh&language=sh&title=Answer
@@ -68,18 +68,19 @@ echo hello world!
 @[5]
 
 +++
-@title[Docker Pipeline]
+@title[Jenkins Pipeline]
 
 @snap[north-west]
-### Using Docker with Jenkins Pipeline
+### CI/CD pipeline with Jenkins Pipeline
 @snapend
 
 @snap[west span-100]
 @ul[](false)
-- Pipeline as code (_Jenkinsfile_)
+- Pipeline plugins suite
+- Pipeline definition in _Jenkinsfile_
 - Built-in support for Docker
-- Use Docker images as the execution environment
-- Any tool can be packaged in a Docker container
+- Use Docker container as the execution environment
+- Any tool can be packaged in a Docker container 
 @ulend
 @snapend
 
@@ -92,12 +93,34 @@ echo hello world!
 
 @snap[west span-100]
 @ol[](false)
-- Start jenkins in docker using custom image
+- Build a custom image for Jenkins
+- Start Jenkins using the custom image
+- Install plugin: _workflow-aggregator_
 - Connect to it using your browser
-- Add a pipeline job _test_ with a pipeline script
+- Add a pipeline job _test_ with a pipeline definition
 - Build it
 - Look at the console output
 @olend
+@snapend
+
++++
+@title[Hints]
+
+@snap[north-west]
+### Hints
+@snapend
+
+@snap[west span-100]
+@ul[](false)
+- Base image: _jenkins/jenkins:alpine_
+- Install Docker:
+```
+USER root
+RUN apk --no-cache add docker && rm -rf /var/cache/apk/*
+```
+- Port: _8080_
+- Plugin: _workflow-aggregator_
+@ulend
 @snapend
 
 +++?code=template/md/ci/Dockerfile&language=dockerfile&title=Dockerfile
