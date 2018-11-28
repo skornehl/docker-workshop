@@ -63,8 +63,7 @@ Day 2
 ---?include=template/md/security/PITCHME.md
 ---?include=template/md/orchestration/PITCHME.md
 
-+++
-
+---
 @title[Goal]
 
 @snap[north-west]
@@ -80,5 +79,7 @@ Get an idea of how to use Docker for automated testing
 @ulend
 @snapend
 
-+++
+---?include=template/md/whats-next/PITCHME.md
+
+---
 Thank you for your attention!
