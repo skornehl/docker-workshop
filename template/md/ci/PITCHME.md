@@ -116,6 +116,7 @@ echo hello world!
 - Install Docker:
 ```
 USER root
+
 RUN apk --no-cache add docker && rm -rf /var/cache/apk/*
 ```
 - Port: _8080_
