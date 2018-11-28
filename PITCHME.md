@@ -76,10 +76,23 @@ Gaining a good understanding of Docker ecosystem <br/> <br/>
 Being prepared to start developing with Docker <br/> <br/>
 
 Get an idea of how to use Docker for automated testing
-@ulend
 @snapend
 
----?include=template/md/whats-next/PITCHME.md
 
----
++++
+@title[What's Next]
+
+@snap[north-west]
+### What's Next
+@snapend
+
+@snap[west span-100]
+Toolchain Custom Image<br/> <br/>
+
+CI/CD Pipeline Implementation<br/> <br/>
+
+Kubernetes Deep Dive
+@snapend
+
++++
 Thank you for your attention!
