@@ -280,7 +280,7 @@ Parameter | Description
 ### Dockerfile, multistage
 @snapend
 
-```docker
+```bash
 FROM golang:1.7.3 as builder
 WORKDIR /go/src/github.com/alexellis/href-counter/
 RUN go get -d -v golang.org/x/net/html
