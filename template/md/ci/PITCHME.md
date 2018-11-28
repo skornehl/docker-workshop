@@ -117,6 +117,7 @@ echo hello world!
 ```
 USER root
 ```
+<br/>
 ```
 RUN apk --no-cache add docker && rm -rf /var/cache/apk/*
 ```
