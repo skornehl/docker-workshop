@@ -85,7 +85,7 @@ Load balancing
 
 @snap[north-east]
 ### [@fa[info]](https://docs.docker.com/swarm/reference/swarm/) 
-@box[bg-gray rounded](docker run swarm [OPTIONS] COMMAND [arg...])
+@box[bg-gray rounded](docker swarm [OPTIONS] COMMAND [arg...])
 @snapend
 <br/>
 
@@ -115,6 +115,10 @@ Parameter | Description
 @snapend
 
 +++
+@snap[north-west]
+### Exercise (Answer)
+@snapend
+
 @title[Answer]
 ```sh
 # Deploy compose file
@@ -189,6 +193,9 @@ update | Update a service
 
 +++
 @title[Answer]
+@snap[north-west]
+### Exercise (Answer)
+
 ```sh
 # Deploy compose file
 docker deploy --compose-file=wordpress-compose.yml WORDPRESS
@@ -225,6 +232,11 @@ docker service scale WORDPRESS_wordpress=3
 
 +++
 @title[Answer]
+
+@snap[north-west]
+### Exercise (Answer)
+@snapend
+
 ```sh
 # Scale
 docker service scale WORDPRESS_wordpress=3
