@@ -68,7 +68,7 @@
 Parameter | Description
 --------- | -------------
   init | Initialize a swarm
-  join | Join a swarm as a node and/or manager
+  join | Join a swarm
   leave | Leave the swarm
   update | Update the swarm
 
@@ -82,11 +82,11 @@ Parameter | Description
 
 @snap[west span-100]
 @ol[](false)
-- Go to www.play-with-docker.com
+- Go to [www.play-with-docker.com]
 - Add 3 nodes
-- Run ```docker swarm init``` on first node
-- Run ```docker swarm join --token <TOKEN> <IP>``` on all other 
-- Have a look woth ```docker node ls```
+- Initialize master
+- Join the other as nodes
+- Have a look with `docker node ls`
 @olend
 @snapend
 
