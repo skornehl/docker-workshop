@@ -226,7 +226,7 @@ docker service scale WORDPRESS_wordpress=3
 
 ```sh
 # Scale
-docker service scale WORDPRESS_wordpress=3
+docker service scale WORDPRESS_wordpress=5
 
 # Inspect
 docker service ps WORDPRESS_wordpress

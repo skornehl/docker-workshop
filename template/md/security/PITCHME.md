@@ -39,7 +39,7 @@ Container security is Linux kernel security
 - Use trusted (or signed) Images
 - Or build own
 - Use image scanner (paid feature)
-- Do not run priviledged
+- Do not run privileged
 - Run process as non-root user
 @ulend
 @snapend

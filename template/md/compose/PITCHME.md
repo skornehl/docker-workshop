@@ -102,7 +102,22 @@ A project name can used to isolate environments, e.g.:<br/>
 @snap[west]
 __Preserve volume data when containers are created__<br/>
 When docker-compose up runs it finds any containers from previous runs and copies the volumes from the old container to the new container<br/>
-<br/>
+@snapend
+
+
+
++++
+@title[Features]
+
+@snap[north-west]
+### Features
+@snapend
+
+@snap[north-east]
+### [@fa[info]](https://docs.docker.com/compose/overview/#features)
+@snapend
+
+@snap[west]
 __Only recreate containers that are changed__<br/>
 When a services restarts and nothing has changed Compose re-uses existing containers because it caches the configuration that was used to create a container
 @snapend
