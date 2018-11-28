@@ -216,6 +216,7 @@ docker service scale WORDPRESS_wordpress=3
 @[7-8]
 @[10-11]
 
++++
 
 @snap[north-west]
 ### Exercise
