@@ -18,21 +18,6 @@
 - Swarm
 - Kubernetes (K8S)
 - Apache Mesos
-@ulend
-@snapend
-
-+++
-@title[Overview]
-
-@snap[north-west]
-### Overview - PaaS
-@snapend
-
-@snap[west span-100]
-@ul[](false)
-- Giant Swarm
-- Deis
-- Rancher
 - Nomad
 @ulend
 @snapend
@@ -106,7 +91,7 @@ Parameter | Description
 
 @snap[west span-100]
 @ol[](false)
-- Go to [www.play-with-docker.com]
+- Go to [www.play-with-docker.com](www.play-with-docker.com)
 - Add 3 nodes
 - Initialize master
 - Join the other as nodes

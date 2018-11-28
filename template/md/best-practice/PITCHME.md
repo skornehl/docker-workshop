@@ -140,9 +140,6 @@ _with ENTRYPOINT as a kind of default parameter_
 @snapend
 use the common, traditional port for your application
 
-For container linking, Docker provides environment variables (eg MYSQL_PORT_3306_TCP)
-
-
 +++
 @title[Guidelines]
 @snap[north-west]
