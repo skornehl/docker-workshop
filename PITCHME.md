@@ -56,6 +56,14 @@ Day 2
 @ulend
 @snapend
 
++++
+@title[How it fits together]
+
+@snap[north-west]
+### How it fits together
+@snapend
+![architecture](template/img/architecture.png)
+
 ---?include=template/md/compose/PITCHME.md
 ---?include=template/md/volumes/PITCHME.md
 ---?include=template/md/ci/PITCHME.md
