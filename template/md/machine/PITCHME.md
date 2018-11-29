@@ -71,10 +71,10 @@ stop | Gracefully stop a machine
 rm | Remove a machine
 
 +++
-@title[Example - Generic Driver]
+@title[Example - Generic (SSH)]
 
 @snap[north-west]
-### Example - Generic Drive (SSH)
+### Example - Generic (SSH)
 @snapend
 
 @snap[north-east]
@@ -96,8 +96,7 @@ docker-machine create \
 ### Generic - Environment Commands
 @snapend
 ```
-docker-machine env default
-
+$ docker-machine env default
 export DOCKER_TLS_VERIFY="1"
 export DOCKER_HOST="tcp://172.16.62.130:2376"
 export DOCKER_CERT_PATH="/Users/<yourusername>/.docker/machine/machines/default"
