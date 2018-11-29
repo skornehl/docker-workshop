@@ -21,6 +21,7 @@ Container security is Linux kernel security
 @ul[](false)
 - Kernel namespaces
 - Control groups
+- Add / Drop cpabilities
 - Seccomp
 - SELinux
 - AppArmor
@@ -43,6 +44,65 @@ Container security is Linux kernel security
 - Run process as non-root user
 @ulend
 @snapend
+
++++
+@title[Troubleshooting]
+
+@snap[north-west]
+### Limit Ressources
+@snapend
+
+Parameter | Description
+------------ | -------------
+cpus | Limit CPUs usage (0.1 - 1)
+cpuset-cpus	 | Limit the specific CPUs or cores a container can use
+memory | The maximum amount of memory 
+memory-reservation	 | Soft Limit
+
+@snapend
+
++++
+
+@title[Exercise]
+
+@snap[north-west]
+### Exercise
+@snapend
+
+@snap[west span-100]
+@ol[](false)
+- Start Alpine and limit ressources to use only 1 CPU with 50%
+- Stress the CPU with
+```dd if=/dev/zero of=/dev/null```
+- See top and docker stats
+@olend
+@snapend
+
++++
+@title[Answer]
+@snap[north-west]
+### Exercise (Answer)
+@snapend
+
+```sh
+# Start Container
+docker run -it --cpus 0.5 --cpuset-cpus 1 alpine
+
+# Check
+top
+docker stats
+
+```
+
+@[1-3]
+@[4-6]
++++
+@title[Answer]
+@snap[north-west]
+### Exercise (Answer)
+@snapend
+
+![layer](template/img/memory.png)
 
 +++
 @title[Network Security]
