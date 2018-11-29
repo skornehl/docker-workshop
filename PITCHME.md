@@ -49,10 +49,10 @@ Day 2
 @ul[](false)
 - Docker Compose
 - Docker Volume
+- CI/CD with Docker
 - Docker Machine
 - Security
 - Orchestration
-- CI/CD with Docker
 @ulend
 @snapend
 
