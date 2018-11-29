@@ -98,7 +98,7 @@ docker-machine create \
 ```
 docker-machine env default
 ```
-<br/>
+
 ```
 export DOCKER_TLS_VERIFY="1"
 export DOCKER_HOST="tcp://172.16.62.130:2376"
