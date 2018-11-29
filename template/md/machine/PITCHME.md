@@ -41,7 +41,7 @@
 
 @snap[west span-100]
 @ul[](false)
-- VirtualBox (_Linux, Windows, OS X_)
+- VirtualBox (_Linux, OS X_)
 - VMware Fusion (_OS X_)
 - Hyper-V (_Windows_)
 - OpenStack, vSphere
