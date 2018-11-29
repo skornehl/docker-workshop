@@ -152,3 +152,10 @@ docker run --rm -it \
     debian \
     fdisk /dev/xvdc
 ```
++++
+@title[USB Mount]
+@snap[north-west]
+### USB Mount
+@snapend
+
+![layer](template/img/usb.png)
