@@ -96,7 +96,10 @@ docker-machine create \
 ### Generic - Environment Commands
 @snapend
 ```
-$ docker-machine env default
+docker-machine env default
+```
+<br/>
+```
 export DOCKER_TLS_VERIFY="1"
 export DOCKER_HOST="tcp://172.16.62.130:2376"
 export DOCKER_CERT_PATH="/Users/<yourusername>/.docker/machine/machines/default"
