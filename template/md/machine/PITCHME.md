@@ -90,10 +90,10 @@ docker-machine create \
   default
 ```
 +++
-@title[Generic - Environment Commands]
+@title[Environment Commands]
 
 @snap[north-west]
-### Generic - Environment Commands
+### Environment Commands
 @snapend
 ```
 docker-machine env default
