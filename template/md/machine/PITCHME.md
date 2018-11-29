@@ -20,7 +20,7 @@
 @snap[west span-100]
 @ul[](false)
 - CLI tool for provisioning Docker hosts
-- With drivers for local VMs and cloud providers
+- With drivers for local VM, data center and cloud providers
 - Creates VM
 - Installs Docker Engine and enables TCP socket
 - Generates TLS certs
