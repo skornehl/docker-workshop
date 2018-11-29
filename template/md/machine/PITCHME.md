@@ -42,7 +42,7 @@
 - VirtualBox (_Linux, OS X_)
 - VMware Fusion (_OS X_)
 - Hyper-V (_Windows_)
-- SSH
+- Generic (SSH)
 - OpenStack, vSphere
 - AWS, Azure, GCE
 @ulend
@@ -71,20 +71,37 @@ stop | Gracefully stop a machine
 rm | Remove a machine
 
 +++
-@title[Example - AWS EC2]
+@title[Example - Generic Driver]
 
 @snap[north-west]
-### Example - AWS EC2
+### Example - Generic Drive (SSH)
 @snapend
 
 @snap[north-east]
-### [@fa[info]](https://docs.docker.com/machine/examples/aws/) 
+### [@fa[info]](https://docs.docker.com/machine/drivers/generic/) 
 @snapend
 
 ```sh
 docker-machine create \
-  --driver amazonec2 \
-  --amazonec2-open-port 8000 \
-  --amazonec2-region us-west-1 \
-  aws-sandbox
+  --driver generic \
+  --generic-ip-address=172.16.62.130 \
+  --generic-ssh-key ~/.ssh/id_rsa \
+  --generic-ssh-user root \
+  default
+```
++++
+@title[Generic - Environment Commands]
+
+@snap[north-west]
+### Generic - Environment Commands
+@snapend
+```
+docker-machine env default
+
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://172.16.62.130:2376"
+export DOCKER_CERT_PATH="/Users/<yourusername>/.docker/machine/machines/default"
+export DOCKER_MACHINE_NAME="default"
+# Run this command to configure your shell:
+# eval "$(docker-machine env default)"
 ```
