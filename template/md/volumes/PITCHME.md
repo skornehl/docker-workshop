@@ -137,3 +137,18 @@ docker volume create --driver local \
     --opt o=addr=192.168.1.1,rw \
     --opt device=:/path/to/dir \
 ```
+
++++
+@title[Run devices inside container]
+
+@snap[north-west]
+### Run devices inside container 
+@snapend
+
+```bash
+# Create nfs
+docker run --rm -it \
+    --device=/dev/sda:/dev/xvdc:r \
+    ubuntu \
+    fdisk /dev/xvdc
+```
