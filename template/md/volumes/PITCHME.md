@@ -139,16 +139,16 @@ docker volume create --driver local \
 ```
 
 +++
-@title[Run devices inside container]
+@title[Run Devices inside a Container]
 
 @snap[north-west]
-### Run devices inside container 
+### Run devices inside a container 
 @snapend
 
 ```bash
-# Create nfs
+# Run device
 docker run --rm -it \
     --device=/dev/sda:/dev/xvdc:r \
-    ubuntu \
+    debian \
     fdisk /dev/xvdc
 ```
