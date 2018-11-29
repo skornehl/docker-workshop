@@ -21,7 +21,9 @@
 @ul[](false)
 - CLI tool for provisioning Docker hosts
 - With drivers for local VMs and cloud providers
-- Creates VM, installs Docker Engine and enables TCP socket with TLS
+- Creates VM
+- Installs Docker Engine and enables TCP socket
+- Generates TLS certs
 @ulend
 @snapend
 
@@ -42,9 +44,9 @@
 - VirtualBox (_Linux, OS X_)
 - VMware Fusion (_OS X_)
 - Hyper-V (_Windows_)
-- Generic (SSH)
 - OpenStack, vSphere
 - AWS, Azure, GCE
+- Generic (SSH)
 @ulend
 @snapend
 
