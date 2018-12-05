@@ -8,13 +8,8 @@ docker logs --follow web1
 curl localhost:8080
 
 # Find out IP
-docker inspect -f  "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" web1
+docker inspect -f  \
+  "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" \
+  web1
 # Alternative:
 docker inspect web1 | grep IPAddress
-
-# Memory Consumtion
-docker stats web1
-
-# Cleanup
-docker stop web1
-docker rm web1
