@@ -103,9 +103,14 @@ ubuntu       latest    93fd78260bd1    2 weeks ago     86.2MB
 alpine       3.7       34ea7509dcad    2 months ago    4.21MB
 ```
 
-<!-- # Dockerfile
+# Dockerfile
 
-- A test file 
+- A text document
+- Contains ordered commands 
+- Basis to build new images
+
+
+# Dockerfile reference
 
 Parameter | Description
 ------------ | -------------
@@ -116,23 +121,121 @@ COPY | Copies new files and directories
 EXPOSE | Informs Docker about listening Ports
 ENV | Sets environment variable
 
-+++
-@title[Build]
 
-@snap[north-west]
-### CLI reference 
-@snapend
-
-@snap[north-east]
-### [@fa[info]](https://docs.docker.com/engine/reference/commandline/exec/) <br/>
-@box[bg-gray rounded](docker build [OPTIONS] PATH | URL | -)
-@snapend
-<br/>
-<br/>
+# CLI reference 
 
 Parameter | Description
 ------------ | -------------
 --add-host | Adds /etc/hosts entry
 --build-arg | Build-time variables
 -f | Filename (default: Dockerfile)
--t | Set Tag -->
+-t | Set Tag
+
+# Example
+1. Build a Dockerfile which replaces 
+    ```
+    /usr/share/nginx/html/index.html
+    ```
+    in nginx container
+2. Start and access it
+
+# Example (Answer) 1/3
+Create local file: index.html
+```{style="width: 40%;"}
+<h1>Hello docker</h1>
+```
+
+# Example (Answer) 2/3
+Create local file: Dockerfile
+```
+FROM nginx:1.15.6-alpine
+LABEL maintainer="no@spam.pls"
+COPY index.html /usr/share/nginx/html/
+```
+
+# Example (Answer) 3/3
+```
+# Build
+docker build -t nginx:local .
+```
+
+# Exercise
+1. Modify Dockerfile to be based on ubuntu
+2. Let Dockerfile install nginx (apt-get)
+3. EXPOSE port 80
+4. Set default CMD to start nginx
+
+# Exercise (Answer)
+```
+FROM ubuntu
+LABEL maintainer="no@spam.pls"
+
+RUN apt-get update && apt-get install nginx
+COPY index.html /usr/share/nginx/html/
+EXPOSE 80
+
+CMD ["nginx"]
+```
+
+# Dockerfile - multistage
+
+```
+FROM golang:1.7.3 as builder
+WORKDIR /go/src/github.com/alexellis/href-counter/
+RUN go get -d -v golang.org/x/net/html
+COPY app.go .
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
+
+FROM alpine:latest
+RUN apk --no-cache add ca-certificates
+WORKDIR /root/
+COPY --from=builder /go/src/github.com/alexellis/href-counter/app .
+CMD ["./app"]
+```
+
+# Dockerfile - FROM scratch 1/2 
+
+```
+#!/usr/bin/env bash
+set -e
+
+rootfsDir="$1"
+shift
+
+busybox="$(which busybox 2>/dev/null || true)"
+if [ -z "$busybox" ]; then
+	echo >&2 'error: busybox: not found'
+	echo >&2 '  install it with your distribution "busybox-static" package'
+	exit 1
+fi
+if ! ldd "$busybox" 2>&1 | grep -q 'not a dynamic executable'; then
+	echo >&2 "error: '$busybox' appears to be a dynamic executable"
+	echo >&2 '  you should install your distribution "busybox-static" package instead'
+	exit 1
+fi
+
+mkdir -p "$rootfsDir/bin"
+rm -f "$rootfsDir/bin/busybox" # just in case
+cp "$busybox" "$rootfsDir/bin/busybox"
+
+(
+	cd "$rootfsDir"
+
+	IFS=$'\n'
+	modules=( $(bin/busybox --list-modules) )
+	unset IFS
+
+	for module in "${modules[@]}"; do
+		mkdir -p "$(dirname "$module")"
+		ln -sf /bin/busybox "$module"
+	done
+)
+```
+# Dockerfile - FROM scratch 1/2 
+
+```
+FROM scratch
+COPY bin /
+CMD ["sh"]
+```
+
