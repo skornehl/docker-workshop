@@ -110,7 +110,7 @@ alpine       3.7       34ea7509dcad    2 months ago    4.21MB
 - Basis to build new images
 
 
-# Dockerfile reference
+# Dockerfile reference 1/2
 
 Parameter | Description
 ------------ | -------------
@@ -119,8 +119,16 @@ RUN | Runs bash command while building
 ADD | Copies new files, directories or remote file URLs
 COPY | Copies new files and directories
 EXPOSE | Informs Docker about listening Ports
-ENV | Sets environment variable
 
+# Dockerfile reference 2/2
+
+Parameter | Description
+------------ | -------------
+ENV | Sets environment variable
+CMD | Provide defaults for an executing container
+ENTRYPOINT | Allows to configure a container that will run as an executable
+USER | Switches the user
+WORKDIR | Switches the default working dir
 
 # CLI reference 
 

@@ -1,5 +1,5 @@
 
-# Introduction  {bg=lightblue rx=1 ry=0 .inline}
+# Introduction  {bg=lightblue y=1 .inline}
 
 ```{style="width: 40%;"}
 Armin Halim-Schneider
