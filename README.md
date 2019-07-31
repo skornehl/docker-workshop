@@ -1,3 +1,3 @@
-# docker
+# Docker Workshop
 
-URL: [https://gitpitch.com/skornehl/docker-workshop](https://gitpitch.com/skornehl/docker-workshop)
+Nothing to see here for now
