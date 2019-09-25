@@ -40,7 +40,7 @@ Parameter | Description
 - Join the other as nodes
 - Have a look with `docker node ls`
 
-###Example (Answer)
+## Example (Answer)
 
 ```sh
 # Deploy compose file

@@ -90,7 +90,7 @@ Parameter | Description
 build | Build an image from a Dockerfile
 history | Show the history of an image
 inspect | Display detailed information
-ls  | List images
+images  | List images
 tag | Create a tag TARGET_IMAGE
 
 ## Example
@@ -141,6 +141,8 @@ USER | Switches the user
 WORKDIR | Switches the default working dir
 
 ## CLI reference 
+
+docker build
 
 Parameter | Description
 ------------ | -------------

@@ -129,10 +129,6 @@ drwxr-xr-x   2 root root 4096 Apr 24  2018 home
 docker run -d --name web1 -p 8080:80 nginx:local
 # Test Access
 curl localhost:8080
-# Cleanup
-docker stop web1
-docker rm web1
-docker rmi nginx:local
 ```
 
 ## CLI reference - CONTROLS

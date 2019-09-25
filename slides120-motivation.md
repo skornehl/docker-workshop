@@ -30,7 +30,7 @@
 
 ## 
 - Reduce concerns about compatibility on platforms
-- Easy service deploymenty
+- Easy service deployment
 - Allows local development
 - It allows me to experiment with support technology without having to pollute my development machine 
 
@@ -38,7 +38,7 @@
 
 ## 
 - Make lifecycle more efficient, consistent and repeatable
-- Increase the quality of code produced by devs
+- Increase the quality of the product produced by devs //todo
 - Eliminate inconsistencies between dev, test, prod and customer environments
 
 ## 

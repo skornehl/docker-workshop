@@ -5,6 +5,9 @@
 
 (Dev-)Ops Engineer | IT Consultant<br/>
 Into Container since 2014<br/>
+K8s<br/>
+Openshift<br/>
+Ansible<br/>
 
 ## Armin Halim-Schneider
 <img src="assets/img/aschneider.jpeg" alt="alt text" width="20%">

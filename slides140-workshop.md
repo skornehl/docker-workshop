@@ -5,4 +5,4 @@
 ## Play With Docker
 
 
-https://start.cc-workshop.tk
+http://play-with-docker.cc-workshop.tk
