@@ -1,5 +1,5 @@
 # Introduction
-## Sebastian Kornehl  
+# Sebastian Kornehl  
 
 <img src="assets/img/skornehl.png" alt="alt text" width="20%">
 
@@ -9,17 +9,20 @@ K8s<br/>
 Openshift<br/>
 Ansible<br/>
 
-## Armin Halim-Schneider
+# Armin Halim-Schneider
 <img src="assets/img/aschneider.jpeg" alt="alt text" width="20%">
 
 (Dev-)Ops Engineer | IT Consultant<br/>
 Into Container since FOREVER<br/>
 
-## Goekhan Makinist
+# Gökhan Makinist
 <img src="assets/img/gmakinist.jpg" alt="alt text" width="20%">
 
-(Dev-)Ops Engineer | IT Consultant<br/>
-Invented Container<br/>
+IT Consultant | Operations Engineer<br/>
+Into Linux since 2000<br/>
+Into Container since 2014<br/>
+Openshift / K8s<br/>
+Ansible<br/>
 
 # Requirements
 
