@@ -13,4 +13,4 @@ controlsLayout: edges
  <br/>
  <br/>
  <br/>
-Docker beginner Workshop
+Docker beginner workshop

@@ -49,10 +49,10 @@ docker build --no-cache=true -t NAME:TAG .
 ```
 
 ## CHECKSUMS
-For ADD and COPY the contents of the file(s) in the image are examined and a checksum is calculated for each file
+For ADD and COPY the contents of the file(s) in the image are examined, and a checksum is calculated for each file
 
 ## CHECKSUMS
-NO CACHE LOOKUP: All other commands are not evaluted on a file level to determine a cache match/hit
+NO CACHE LOOKUP: All other commands are not evaluated on a file level to determine a cache match/hit
 
 ## FROM
 use current official Repositories,
@@ -95,7 +95,7 @@ use the common, traditional port for your application
     ENV PATH /usr/local/nginx/bin:$PATH
     ```
 - Provide needed env vars for services eg. Postgres PGDATA
-- Use for version numbers and pathes (like constant vars)
+- Use for version numbers and paths (like constant vars)
 
 ## Copy
 - Beware of using ADD instead of COPY

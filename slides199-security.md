@@ -8,7 +8,7 @@ Container security is Linux kernel security
 ## Linux kernel security
 - Kernel namespaces
 - Control groups
-- Add / Drop cpabilities
+- Add / Drop capabilities
 - Seccomp
 - SELinux
 - AppArmor
@@ -22,7 +22,7 @@ Container security is Linux kernel security
 - Do not run privileged
 - Run process as non-root user
 
-## Limit Ressources
+## Limit Resources
 
 Parameter | Description
 ------------ | -------------
@@ -44,7 +44,7 @@ docker container run --pids-limit 100 -u 1000 ubuntu bash -c ":() { : | : & }; :
 ```
 
 ## Exercise
-- Start Alpine and limit ressources to use only 1 CPU with 50%
+- Start Alpine and limit resources to use only 1 CPU with 50%
 - Stress the CPU with
 ```dd if=/dev/zero of=/dev/null```
 - See top and docker stats
@@ -64,7 +64,7 @@ docker stats
 
 
 ## Network Security
-- Seperate Docker networks
+- Separate Docker networks
 - In Swarm/K8s: Overlay networks
 - WeaveNet/Overlay: Encryption
 

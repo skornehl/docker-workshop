@@ -173,8 +173,12 @@ stats | Display container resource usage statistics
 docker inspect -f  \
     "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}"\
     web1
+
 # Alternative:
 docker inspect web1 | grep IPAddress
+
+#Alternative2:
+docker inspect web1 | jq '.[].NetworkSettings.IPAddress'
 
 # Memory Consumtion
 docker stats web1

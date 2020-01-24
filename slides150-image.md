@@ -152,12 +152,11 @@ Parameter | Description
 -t | Set Tag
 
 ## Example
-1. Build a Dockerfile which replaces 
-    ```
-    /usr/share/nginx/html/index.html
-    ```
-    in nginx container
-2. Start and access it
+Build a Dockerfile which replaces 
+```
+/usr/share/nginx/html/index.html
+```
+in nginx container
 
 ## Example (Answer) 1/3
 Create local file: index.html
@@ -191,7 +190,7 @@ docker build -t nginx:local .
 FROM ubuntu
 LABEL maintainer="no@spam.pls"
 
-RUN apt-get update && apt-get install nginx
+RUN apt-get update && apt-get install -y nginx
 COPY index.html /usr/share/nginx/html/
 EXPOSE 80
 

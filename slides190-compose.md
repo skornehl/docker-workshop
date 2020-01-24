@@ -39,7 +39,7 @@ When a services restarts and nothing has changed Compose re-uses existing contai
 
 ## Features
 
-__Variables and moving a composition between environments__<br/>
+__Variables for moving a composition between environments__<br/>
 Variables in the Compose file can be used to customize your composition for different environments or users.<br/>
 Inheritance is support by using the extends field or by creating multiple Compose files.
 
