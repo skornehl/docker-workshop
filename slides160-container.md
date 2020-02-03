@@ -101,7 +101,7 @@ docker run -d --rm --name ubuntu ubuntu sleep 120
 ```
 Exec into container and list files
 ```
-docker exec -ti --rm ubuntu ls -al
+docker exec -ti ubuntu ls -al
 ```
 
 ## Example (Answer)
