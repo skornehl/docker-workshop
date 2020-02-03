@@ -180,8 +180,8 @@ docker build -t nginx:local .
 
 ## Exercise
 1. Modify Dockerfile to be based on ubuntu
-2. Let Dockerfile install nginx (apt-get) <br/>
-    HINT: do `apt-get update` first
+2. Let Dockerfile install nginx (apt) <br/>
+    HINT: do `apt update` first
 3. EXPOSE port 80
 4. Set default CMD to start nginx
 
@@ -190,11 +190,11 @@ docker build -t nginx:local .
 FROM ubuntu
 LABEL maintainer="no@spam.pls"
 
-RUN apt-get update && apt-get install -y nginx
-COPY index.html /usr/share/nginx/html/
+RUN apt update && apt install -y nginx
+COPY index.html /var/www/html/
 EXPOSE 80
 
-CMD ["nginx"]
+CMD ["nginx", "-g", "daemon off;"]
 ```
 
 ## Multistage
