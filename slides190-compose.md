@@ -10,7 +10,7 @@
 
 ## Use Cases
 - running web apps in an isolated environment is crucial
-- the Compose file allows to document service dependencies
+- the Compose file allows documenting service dependencies
 - multi-page "developer getting started guides" can be avoided
 - This presentation ;-)
 
@@ -26,7 +26,7 @@ __Multiple isolated environments on a single host__<br/>
 A project name can used to isolate environments, e.g.:<br/>
 <br/>
 **Dev host**: multiple copies of single env (= feature branch names)<br/>
-**CI server**: do not allow builds to interfer (= unique build number)<br/>
+**CI server**: do not allow builds to interfere (= unique build number)<br/>
 **Shared host**: prevent different projects which may use same service names from interfering with each other
 
 ## Features
@@ -116,11 +116,10 @@ services:
 ## Exercise
 - Start the application and sign in
 - Is your account stored after restart?
-- Mount a volume into the db container
-  Use a local folder
-  The folder to be mounted is `/var/lib/mysql`
+- Mount a local folder as volume into the db container<br/>
+The folder to be mounted is `/var/lib/mysql`
 - Start the application and sign in
-- After restart the data should not get lost
+- After a restart the data should not get lost
 
 ## Exercise (Answer)
 ```yaml
