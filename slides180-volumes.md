@@ -61,6 +61,19 @@
 +--------------------------------+
 ```
 
+## Definition volumes
+
+- Mechanism for persisting data generated or used by containers
+- Completely managed by docker
+- Can be shared among multiple containers
+- Volume drivers extend functionality (remote storage, encryption, ...)
+
+## Definition bind mounts
+
+- Mounts a file or directory from the host machine into the container
+- Referenced by the full path on host system
+- Not managed by docker at all 
+
 ## CLI reference - volume
 
 Parameter | Description
@@ -82,8 +95,8 @@ Parameter | Description
 
 ## Mount vs -v 1/2
 
-- To bind mounts, all options for volumes are available for both --mount and -v flags.
-- When using volumes with services (Swarm), only --mount is supported.
+- To bind mounts, all options for volumes are available for both --mount and -v flags
+- When using volumes with services (Swarm), only --mount is supported
 
 ## Mount vs -v 2/2
 
