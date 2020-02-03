@@ -147,3 +147,10 @@ docker run --rm -it \
 ## USB Mount
 
 ![](assets/img/usb.png)
+
+## Exercise
+
+1. Create a new local `index.html` file
+2. Use a volume to mount this file into the nginx container
+3. Test that the local file is displayed
+4. Change the local file content and revisit the page
